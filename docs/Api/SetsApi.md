@@ -149,7 +149,7 @@ No authorization required
 ## `getSetsSearch()`
 
 ```php
-getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level): \OpenAPI\Client\Model\SetListEntry[]
+getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit): \OpenAPI\Client\Model\SetListEntry[]
 ```
 
 Search Sets
@@ -174,9 +174,10 @@ $game = dofus2; // string
 $query = Des; // string | case sensitive search query
 $filter_min_highest_equipment_level = 195; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
+$limit = 8; // int | maximum number of returned results
 
 try {
-    $result = $apiInstance->getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level);
+    $result = $apiInstance->getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SetsApi->getSetsSearch: ', $e->getMessage(), PHP_EOL;
@@ -192,6 +193,7 @@ try {
 | **query** | **string**| case sensitive search query | |
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
+| **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
 
 ### Return type
 

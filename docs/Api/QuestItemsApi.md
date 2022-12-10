@@ -213,7 +213,7 @@ No authorization required
 ## `getItemsQuestSearch()`
 
 ```php
-getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level): \OpenAPI\Client\Model\ItemListEntry[]
+getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit): \OpenAPI\Client\Model\ItemListEntry[]
 ```
 
 Search Quest Items
@@ -239,9 +239,10 @@ $query = Ficha; // string | case sensitive search query
 $filter_type_name = Justicieros; // string | only results with the translated type name
 $filter_min_level = 60; // int | only results which level is equal or above this value
 $filter_max_level = 70; // int | only results which level is equal or below this value
+$limit = 8; // int | maximum number of returned results
 
 try {
-    $result = $apiInstance->getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level);
+    $result = $apiInstance->getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestItemsApi->getItemsQuestSearch: ', $e->getMessage(), PHP_EOL;
@@ -258,6 +259,7 @@ try {
 | **filter_type_name** | **string**| only results with the translated type name | [optional] |
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |
+| **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
 
 ### Return type
 

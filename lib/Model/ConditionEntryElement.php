@@ -1,6 +1,6 @@
 <?php
 /**
- * TwitterWebhook
+ * ConditionEntryElement
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * TwitterWebhook Class Doc Comment
+ * ConditionEntryElement Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
+class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'TwitterWebhook';
+    protected static $openAPIModelName = 'Condition_Entry_element';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,15 +58,9 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'whitelist' => 'string[]',
-        'blacklist' => 'string[]',
-        'subscriptions' => 'string[]',
-        'format' => 'string',
-        'preview_length' => 'int',
-        'created_at' => '\DateTime',
-        'last_fired_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'name' => 'string',
+        'id' => 'int',
+        'is_meta' => 'bool'
     ];
 
     /**
@@ -77,15 +71,9 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => 'uuid',
-        'whitelist' => null,
-        'blacklist' => null,
-        'subscriptions' => null,
-        'format' => null,
-        'preview_length' => 'int32',
-        'created_at' => 'date-time',
-        'last_fired_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'name' => null,
+        'id' => null,
+        'is_meta' => null
     ];
 
     /**
@@ -94,15 +82,9 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-		'whitelist' => true,
-		'blacklist' => true,
-		'subscriptions' => false,
-		'format' => false,
-		'preview_length' => false,
-		'created_at' => false,
-		'last_fired_at' => true,
-		'updated_at' => false
+        'name' => false,
+		'id' => false,
+		'is_meta' => false
     ];
 
     /**
@@ -191,15 +173,9 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'name' => 'name',
         'id' => 'id',
-        'whitelist' => 'whitelist',
-        'blacklist' => 'blacklist',
-        'subscriptions' => 'subscriptions',
-        'format' => 'format',
-        'preview_length' => 'preview_length',
-        'created_at' => 'created_at',
-        'last_fired_at' => 'last_fired_at',
-        'updated_at' => 'updated_at'
+        'is_meta' => 'is_meta'
     ];
 
     /**
@@ -208,15 +184,9 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'name' => 'setName',
         'id' => 'setId',
-        'whitelist' => 'setWhitelist',
-        'blacklist' => 'setBlacklist',
-        'subscriptions' => 'setSubscriptions',
-        'format' => 'setFormat',
-        'preview_length' => 'setPreviewLength',
-        'created_at' => 'setCreatedAt',
-        'last_fired_at' => 'setLastFiredAt',
-        'updated_at' => 'setUpdatedAt'
+        'is_meta' => 'setIsMeta'
     ];
 
     /**
@@ -225,15 +195,9 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'name' => 'getName',
         'id' => 'getId',
-        'whitelist' => 'getWhitelist',
-        'blacklist' => 'getBlacklist',
-        'subscriptions' => 'getSubscriptions',
-        'format' => 'getFormat',
-        'preview_length' => 'getPreviewLength',
-        'created_at' => 'getCreatedAt',
-        'last_fired_at' => 'getLastFiredAt',
-        'updated_at' => 'getUpdatedAt'
+        'is_meta' => 'getIsMeta'
     ];
 
     /**
@@ -277,19 +241,6 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    public const FORMAT_DISCORD = 'discord';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getFormatAllowableValues()
-    {
-        return [
-            self::FORMAT_DISCORD,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -306,15 +257,9 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('whitelist', $data ?? [], null);
-        $this->setIfExists('blacklist', $data ?? [], null);
-        $this->setIfExists('subscriptions', $data ?? [], null);
-        $this->setIfExists('format', $data ?? [], null);
-        $this->setIfExists('preview_length', $data ?? [], null);
-        $this->setIfExists('created_at', $data ?? [], null);
-        $this->setIfExists('last_fired_at', $data ?? [], null);
-        $this->setIfExists('updated_at', $data ?? [], null);
+        $this->setIfExists('is_meta', $data ?? [], null);
     }
 
     /**
@@ -344,23 +289,6 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getFormatAllowableValues();
-        if (!is_null($this->container['format']) && !in_array($this->container['format'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'format', must be one of '%s'",
-                $this->container['format'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if (!is_null($this->container['preview_length']) && ($this->container['preview_length'] > 280)) {
-            $invalidProperties[] = "invalid value for 'preview_length', must be smaller than or equal to 280.";
-        }
-
-        if (!is_null($this->container['preview_length']) && ($this->container['preview_length'] < 0)) {
-            $invalidProperties[] = "invalid value for 'preview_length', must be bigger than or equal to 0.";
-        }
-
         return $invalidProperties;
     }
 
@@ -377,9 +305,36 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
+     * Gets name
      *
      * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name name
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        }
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return int|null
      */
     public function getId()
     {
@@ -389,7 +344,7 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id
+     * @param int|null $id id
      *
      * @return self
      */
@@ -404,256 +359,28 @@ class TwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets whitelist
+     * Gets is_meta
      *
-     * @return string[]|null
+     * @return bool|null
      */
-    public function getWhitelist()
+    public function getIsMeta()
     {
-        return $this->container['whitelist'];
+        return $this->container['is_meta'];
     }
 
     /**
-     * Sets whitelist
+     * Sets is_meta
      *
-     * @param string[]|null $whitelist whitelist
+     * @param bool|null $is_meta true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
      *
      * @return self
      */
-    public function setWhitelist($whitelist)
+    public function setIsMeta($is_meta)
     {
-        if (is_null($whitelist)) {
-            array_push($this->openAPINullablesSetToNull, 'whitelist');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('whitelist', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($is_meta)) {
+            throw new \InvalidArgumentException('non-nullable is_meta cannot be null');
         }
-        $this->container['whitelist'] = $whitelist;
-
-        return $this;
-    }
-
-    /**
-     * Gets blacklist
-     *
-     * @return string[]|null
-     */
-    public function getBlacklist()
-    {
-        return $this->container['blacklist'];
-    }
-
-    /**
-     * Sets blacklist
-     *
-     * @param string[]|null $blacklist blacklist
-     *
-     * @return self
-     */
-    public function setBlacklist($blacklist)
-    {
-        if (is_null($blacklist)) {
-            array_push($this->openAPINullablesSetToNull, 'blacklist');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('blacklist', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['blacklist'] = $blacklist;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscriptions
-     *
-     * @return string[]|null
-     */
-    public function getSubscriptions()
-    {
-        return $this->container['subscriptions'];
-    }
-
-    /**
-     * Sets subscriptions
-     *
-     * @param string[]|null $subscriptions subscriptions
-     *
-     * @return self
-     */
-    public function setSubscriptions($subscriptions)
-    {
-        if (is_null($subscriptions)) {
-            throw new \InvalidArgumentException('non-nullable subscriptions cannot be null');
-        }
-        $this->container['subscriptions'] = $subscriptions;
-
-        return $this;
-    }
-
-    /**
-     * Gets format
-     *
-     * @return string|null
-     */
-    public function getFormat()
-    {
-        return $this->container['format'];
-    }
-
-    /**
-     * Sets format
-     *
-     * @param string|null $format format
-     *
-     * @return self
-     */
-    public function setFormat($format)
-    {
-        if (is_null($format)) {
-            throw new \InvalidArgumentException('non-nullable format cannot be null');
-        }
-        $allowedValues = $this->getFormatAllowableValues();
-        if (!in_array($format, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'format', must be one of '%s'",
-                    $format,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['format'] = $format;
-
-        return $this;
-    }
-
-    /**
-     * Gets preview_length
-     *
-     * @return int|null
-     */
-    public function getPreviewLength()
-    {
-        return $this->container['preview_length'];
-    }
-
-    /**
-     * Sets preview_length
-     *
-     * @param int|null $preview_length preview_length
-     *
-     * @return self
-     */
-    public function setPreviewLength($preview_length)
-    {
-        if (is_null($preview_length)) {
-            throw new \InvalidArgumentException('non-nullable preview_length cannot be null');
-        }
-
-        if (($preview_length > 280)) {
-            throw new \InvalidArgumentException('invalid value for $preview_length when calling TwitterWebhook., must be smaller than or equal to 280.');
-        }
-        if (($preview_length < 0)) {
-            throw new \InvalidArgumentException('invalid value for $preview_length when calling TwitterWebhook., must be bigger than or equal to 0.');
-        }
-
-        $this->container['preview_length'] = $preview_length;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return \DateTime|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime|null $created_at created_at
-     *
-     * @return self
-     */
-    public function setCreatedAt($created_at)
-    {
-        if (is_null($created_at)) {
-            throw new \InvalidArgumentException('non-nullable created_at cannot be null');
-        }
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_fired_at
-     *
-     * @return \DateTime|null
-     */
-    public function getLastFiredAt()
-    {
-        return $this->container['last_fired_at'];
-    }
-
-    /**
-     * Sets last_fired_at
-     *
-     * @param \DateTime|null $last_fired_at last_fired_at
-     *
-     * @return self
-     */
-    public function setLastFiredAt($last_fired_at)
-    {
-        if (is_null($last_fired_at)) {
-            array_push($this->openAPINullablesSetToNull, 'last_fired_at');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_fired_at', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['last_fired_at'] = $last_fired_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return \DateTime|null
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param \DateTime|null $updated_at updated_at
-     *
-     * @return self
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        if (is_null($updated_at)) {
-            throw new \InvalidArgumentException('non-nullable updated_at cannot be null');
-        }
-        $this->container['updated_at'] = $updated_at;
+        $this->container['is_meta'] = $is_meta;
 
         return $this;
     }

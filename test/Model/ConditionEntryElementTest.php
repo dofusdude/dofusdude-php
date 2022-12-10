@@ -1,6 +1,6 @@
 <?php
 /**
- * CosmeticTest
+ * ConditionEntryElementTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * CosmeticTest Class Doc Comment
+ * ConditionEntryElementTest Class Doc Comment
  *
  * @category    Class
- * @description Cosmetic
+ * @description ConditionEntryElement
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class CosmeticTest extends TestCase
+class ConditionEntryElementTest extends TestCase
 {
 
     /**
@@ -72,18 +72,9 @@ class CosmeticTest extends TestCase
     }
 
     /**
-     * Test "Cosmetic"
+     * Test "ConditionEntryElement"
      */
-    public function testCosmetic()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ankama_id"
-     */
-    public function testPropertyAnkamaId()
+    public function testConditionEntryElement()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -99,72 +90,18 @@ class CosmeticTest extends TestCase
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "id"
      */
-    public function testPropertyDescription()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "is_meta"
      */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "level"
-     */
-    public function testPropertyLevel()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "pods"
-     */
-    public function testPropertyPods()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "image_urls"
-     */
-    public function testPropertyImageUrls()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "effects"
-     */
-    public function testPropertyEffects()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "conditions"
-     */
-    public function testPropertyConditions()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "recipe"
-     */
-    public function testPropertyRecipe()
+    public function testPropertyIsMeta()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

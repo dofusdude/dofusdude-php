@@ -10,7 +10,7 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 ## `getItemsAllSearch()`
 
 ```php
-getItemsAllSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level): \OpenAPI\Client\Model\ItemsListEntryTyped[]
+getItemsAllSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit): \OpenAPI\Client\Model\ItemsListEntryTyped[]
 ```
 
 Search All Items
@@ -30,15 +30,16 @@ $apiInstance = new OpenAPI\Client\Api\AllItemsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$language = 'language_example'; // string | a valid language code
+$language = fr; // string | a valid language code
 $game = dofus2; // string
 $query = atcham; // string | case sensitive search query
 $filter_type_name = Bottes; // string | only results with the translated type name across all item_subtypes
 $filter_min_level = 190; // int | only results which level is equal or above this value
 $filter_max_level = 200; // int | only results which level is equal or below this value
+$limit = 8; // int | maximum number of returned results
 
 try {
-    $result = $apiInstance->getItemsAllSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level);
+    $result = $apiInstance->getItemsAllSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllItemsApi->getItemsAllSearch: ', $e->getMessage(), PHP_EOL;
@@ -55,6 +56,7 @@ try {
 | **filter_type_name** | **string**| only results with the translated type name across all item_subtypes | [optional] |
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |
+| **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
 
 ### Return type
 
