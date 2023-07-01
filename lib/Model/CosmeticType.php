@@ -1,6 +1,6 @@
 <?php
 /**
- * EffectsEntryType
+ * CosmeticType
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * EffectsEntryType Class Doc Comment
+ * CosmeticType Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
+class CosmeticType implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Effects_Entry_type';
+    protected static $openAPIModelName = 'Cosmetic_type';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,7 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'id' => 'int',
-        'is_meta' => 'bool',
-        'is_active' => 'bool'
+        'id' => 'int'
     ];
 
     /**
@@ -73,9 +71,7 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'id' => null,
-        'is_meta' => null,
-        'is_active' => null
+        'id' => null
     ];
 
     /**
@@ -85,9 +81,7 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'id' => false,
-		'is_meta' => false,
-		'is_active' => false
+		'id' => false
     ];
 
     /**
@@ -177,9 +171,7 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'id' => 'id',
-        'is_meta' => 'is_meta',
-        'is_active' => 'is_active'
+        'id' => 'id'
     ];
 
     /**
@@ -189,9 +181,7 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'name' => 'setName',
-        'id' => 'setId',
-        'is_meta' => 'setIsMeta',
-        'is_active' => 'setIsActive'
+        'id' => 'setId'
     ];
 
     /**
@@ -201,9 +191,7 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'name' => 'getName',
-        'id' => 'getId',
-        'is_meta' => 'getIsMeta',
-        'is_active' => 'getIsActive'
+        'id' => 'getId'
     ];
 
     /**
@@ -265,8 +253,6 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('is_meta', $data ?? [], null);
-        $this->setIfExists('is_active', $data ?? [], null);
     }
 
     /**
@@ -295,6 +281,10 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        if (!is_null($this->container['id']) && ($this->container['id'] < 0)) {
+            $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 0.";
+        }
 
         return $invalidProperties;
     }
@@ -360,61 +350,12 @@ class EffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
+
+        if (($id < 0)) {
+            throw new \InvalidArgumentException('invalid value for $id when calling CosmeticType., must be bigger than or equal to 0.');
+        }
+
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_meta
-     *
-     * @return bool|null
-     */
-    public function getIsMeta()
-    {
-        return $this->container['is_meta'];
-    }
-
-    /**
-     * Sets is_meta
-     *
-     * @param bool|null $is_meta true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
-     *
-     * @return self
-     */
-    public function setIsMeta($is_meta)
-    {
-        if (is_null($is_meta)) {
-            throw new \InvalidArgumentException('non-nullable is_meta cannot be null');
-        }
-        $this->container['is_meta'] = $is_meta;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_active
-     *
-     * @return bool|null
-     */
-    public function getIsActive()
-    {
-        return $this->container['is_active'];
-    }
-
-    /**
-     * Sets is_active
-     *
-     * @param bool|null $is_active Affects target or source actively.
-     *
-     * @return self
-     */
-    public function setIsActive($is_active)
-    {
-        if (is_null($is_active)) {
-            throw new \InvalidArgumentException('non-nullable is_active cannot be null');
-        }
-        $this->container['is_active'] = $is_active;
 
         return $this;
     }

@@ -1,4 +1,4 @@
-# # ItemsListEntryTypedType
+# # CosmeticType
 
 ## Properties
 

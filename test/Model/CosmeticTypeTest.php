@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemsListPagedTest
+ * CosmeticTypeTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemsListPagedTest Class Doc Comment
+ * CosmeticTypeTest Class Doc Comment
  *
  * @category    Class
- * @description ItemsListPaged
+ * @description CosmeticType
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemsListPagedTest extends TestCase
+class CosmeticTypeTest extends TestCase
 {
 
     /**
@@ -72,27 +72,27 @@ class ItemsListPagedTest extends TestCase
     }
 
     /**
-     * Test "ItemsListPaged"
+     * Test "CosmeticType"
      */
-    public function testItemsListPaged()
+    public function testCosmeticType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "_links"
+     * Test attribute "name"
      */
-    public function testPropertyLinks()
+    public function testPropertyName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "items"
+     * Test attribute "id"
      */
-    public function testPropertyItems()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
