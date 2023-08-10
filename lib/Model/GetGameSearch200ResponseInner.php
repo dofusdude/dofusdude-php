@@ -1,6 +1,6 @@
 <?php
 /**
- * MountListEntry
+ * GetGameSearch200ResponseInner
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * MountListEntry Class Doc Comment
+ * GetGameSearch200ResponseInner Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Mount-List-Entry';
+    protected static $openAPIModelName = 'get_game_search_200_response_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,9 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ankama_id' => 'int',
         'name' => 'string',
-        'family_name' => 'string',
-        'image_urls' => '\OpenAPI\Client\Model\ImageUrls'
+        'ankama_id' => 'int',
+        'type' => 'string'
     ];
 
     /**
@@ -72,10 +71,9 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ankama_id' => null,
         'name' => null,
-        'family_name' => null,
-        'image_urls' => null
+        'ankama_id' => null,
+        'type' => null
     ];
 
     /**
@@ -84,10 +82,9 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'ankama_id' => false,
-		'name' => false,
-		'family_name' => false,
-		'image_urls' => false
+        'name' => false,
+		'ankama_id' => false,
+		'type' => false
     ];
 
     /**
@@ -176,10 +173,9 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'ankama_id' => 'ankama_id',
         'name' => 'name',
-        'family_name' => 'family_name',
-        'image_urls' => 'image_urls'
+        'ankama_id' => 'ankama_id',
+        'type' => 'type'
     ];
 
     /**
@@ -188,10 +184,9 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'ankama_id' => 'setAnkamaId',
         'name' => 'setName',
-        'family_name' => 'setFamilyName',
-        'image_urls' => 'setImageUrls'
+        'ankama_id' => 'setAnkamaId',
+        'type' => 'setType'
     ];
 
     /**
@@ -200,10 +195,9 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'ankama_id' => 'getAnkamaId',
         'name' => 'getName',
-        'family_name' => 'getFamilyName',
-        'image_urls' => 'getImageUrls'
+        'ankama_id' => 'getAnkamaId',
+        'type' => 'getType'
     ];
 
     /**
@@ -263,10 +257,9 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('ankama_id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('family_name', $data ?? [], null);
-        $this->setIfExists('image_urls', $data ?? [], null);
+        $this->setIfExists('ankama_id', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
     }
 
     /**
@@ -312,33 +305,6 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets ankama_id
-     *
-     * @return int|null
-     */
-    public function getAnkamaId()
-    {
-        return $this->container['ankama_id'];
-    }
-
-    /**
-     * Sets ankama_id
-     *
-     * @param int|null $ankama_id ankama_id
-     *
-     * @return self
-     */
-    public function setAnkamaId($ankama_id)
-    {
-        if (is_null($ankama_id)) {
-            throw new \InvalidArgumentException('non-nullable ankama_id cannot be null');
-        }
-        $this->container['ankama_id'] = $ankama_id;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      *
      * @return string|null
@@ -351,7 +317,7 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name Name of the hit. The query could still have matched with the description only.
      *
      * @return self
      */
@@ -366,55 +332,55 @@ class MountListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets family_name
+     * Gets ankama_id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getFamilyName()
+    public function getAnkamaId()
     {
-        return $this->container['family_name'];
+        return $this->container['ankama_id'];
     }
 
     /**
-     * Sets family_name
+     * Sets ankama_id
      *
-     * @param string|null $family_name family_name
+     * @param int|null $ankama_id Ankama ID for retrieving more details in the type specific endpoint.
      *
      * @return self
      */
-    public function setFamilyName($family_name)
+    public function setAnkamaId($ankama_id)
     {
-        if (is_null($family_name)) {
-            throw new \InvalidArgumentException('non-nullable family_name cannot be null');
+        if (is_null($ankama_id)) {
+            throw new \InvalidArgumentException('non-nullable ankama_id cannot be null');
         }
-        $this->container['family_name'] = $family_name;
+        $this->container['ankama_id'] = $ankama_id;
 
         return $this;
     }
 
     /**
-     * Gets image_urls
+     * Gets type
      *
-     * @return \OpenAPI\Client\Model\ImageUrls|null
+     * @return string|null
      */
-    public function getImageUrls()
+    public function getType()
     {
-        return $this->container['image_urls'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets image_urls
+     * Sets type
      *
-     * @param \OpenAPI\Client\Model\ImageUrls|null $image_urls image_urls
+     * @param string|null $type Type classification
      *
      * @return self
      */
-    public function setImageUrls($image_urls)
+    public function setType($type)
     {
-        if (is_null($image_urls)) {
-            throw new \InvalidArgumentException('non-nullable image_urls cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['image_urls'] = $image_urls;
+        $this->container['type'] = $type;
 
         return $this;
     }

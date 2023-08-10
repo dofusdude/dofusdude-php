@@ -4,11 +4,11 @@
 .travis.yml
 README.md
 composer.json
-docs/Api/AllItemsApi.md
 docs/Api/AlmanaxApi.md
 docs/Api/ConsumablesApi.md
 docs/Api/CosmeticsApi.md
 docs/Api/EquipmentApi.md
+docs/Api/GameApi.md
 docs/Api/MetaApi.md
 docs/Api/MountsApi.md
 docs/Api/QuestItemsApi.md
@@ -35,6 +35,7 @@ docs/Model/EffectsEntryType.md
 docs/Model/Equipment.md
 docs/Model/EquipmentParentSet.md
 docs/Model/EquipmentSet.md
+docs/Model/GetGameSearch200ResponseInner.md
 docs/Model/GetMetaAlmanaxBonuses200ResponseInner.md
 docs/Model/GetMetaWebhooksTwitter200Response.md
 docs/Model/ImageUrls.md
@@ -58,11 +59,11 @@ docs/Model/TwitterWebhook.md
 docs/Model/Weapon.md
 docs/Model/WeaponRange.md
 git_push.sh
-lib/Api/AllItemsApi.php
 lib/Api/AlmanaxApi.php
 lib/Api/ConsumablesApi.php
 lib/Api/CosmeticsApi.php
 lib/Api/EquipmentApi.php
+lib/Api/GameApi.php
 lib/Api/MetaApi.php
 lib/Api/MountsApi.php
 lib/Api/QuestItemsApi.php
@@ -92,6 +93,7 @@ lib/Model/EffectsEntryType.php
 lib/Model/Equipment.php
 lib/Model/EquipmentParentSet.php
 lib/Model/EquipmentSet.php
+lib/Model/GetGameSearch200ResponseInner.php
 lib/Model/GetMetaAlmanaxBonuses200ResponseInner.php
 lib/Model/GetMetaWebhooksTwitter200Response.php
 lib/Model/ImageUrls.php
@@ -117,11 +119,11 @@ lib/Model/Weapon.php
 lib/Model/WeaponRange.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/AllItemsApiTest.php
 test/Api/AlmanaxApiTest.php
 test/Api/ConsumablesApiTest.php
 test/Api/CosmeticsApiTest.php
 test/Api/EquipmentApiTest.php
+test/Api/GameApiTest.php
 test/Api/MetaApiTest.php
 test/Api/MountsApiTest.php
 test/Api/QuestItemsApiTest.php
@@ -148,6 +150,7 @@ test/Model/EffectsEntryTypeTest.php
 test/Model/EquipmentParentSetTest.php
 test/Model/EquipmentSetTest.php
 test/Model/EquipmentTest.php
+test/Model/GetGameSearch200ResponseInnerTest.php
 test/Model/GetMetaAlmanaxBonuses200ResponseInnerTest.php
 test/Model/GetMetaWebhooksTwitter200ResponseTest.php
 test/Model/ImageUrlsTest.php
