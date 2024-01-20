@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **image_urls** | [**\OpenAPI\Client\Model\ImageUrls**](ImageUrls.md) |  | [optional]
 **effects** | [**\OpenAPI\Client\Model\EffectsEntry[]**](EffectsEntry.md) |  | [optional]
 **conditions** | [**\OpenAPI\Client\Model\ConditionEntry[]**](ConditionEntry.md) |  | [optional]
+**condition_tree** | [**\OpenAPI\Client\Model\ConditionTreeNode**](ConditionTreeNode.md) |  | [optional]
 **critical_hit_probability** | **int** |  | [optional]
 **critical_hit_bonus** | **int** |  | [optional]
 **is_two_handed** | **bool** |  | [optional]

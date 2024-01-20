@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **image_urls** | [**\OpenAPI\Client\Model\ImageUrls**](ImageUrls.md) |  | [optional]
 **effects** | [**\OpenAPI\Client\Model\EffectsEntry[]**](EffectsEntry.md) |  | [optional]
 **conditions** | [**\OpenAPI\Client\Model\ConditionEntry[]**](ConditionEntry.md) |  | [optional]
+**condition_tree** | [**\OpenAPI\Client\Model\ConditionTreeNode**](ConditionTreeNode.md) |  | [optional]
 **recipe** | [**\OpenAPI\Client\Model\RecipeEntry[]**](RecipeEntry.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

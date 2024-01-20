@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemListEntry
+ * ConditionTreeLeaf
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ItemListEntry Class Doc Comment
+ * ConditionTreeLeaf Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
+class ConditionTreeLeaf implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Item-List-Entry';
+    protected static $openAPIModelName = 'Condition-Tree-Leaf';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +58,8 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ankama_id' => 'int',
-        'name' => 'string',
-        'type' => '\OpenAPI\Client\Model\ItemsListEntryTypedType',
-        'level' => 'int',
-        'image_urls' => '\OpenAPI\Client\Model\ImageUrls',
-        'recipe' => '\OpenAPI\Client\Model\RecipeEntry[]'
+        'is_operand' => 'bool',
+        'condition' => '\OpenAPI\Client\Model\ConditionEntry'
     ];
 
     /**
@@ -74,12 +70,8 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ankama_id' => null,
-        'name' => null,
-        'type' => null,
-        'level' => null,
-        'image_urls' => null,
-        'recipe' => null
+        'is_operand' => null,
+        'condition' => null
     ];
 
     /**
@@ -88,12 +80,8 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'ankama_id' => false,
-        'name' => false,
-        'type' => false,
-        'level' => false,
-        'image_urls' => false,
-        'recipe' => true
+        'is_operand' => false,
+        'condition' => false
     ];
 
     /**
@@ -182,12 +170,8 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'ankama_id' => 'ankama_id',
-        'name' => 'name',
-        'type' => 'type',
-        'level' => 'level',
-        'image_urls' => 'image_urls',
-        'recipe' => 'recipe'
+        'is_operand' => 'is_operand',
+        'condition' => 'condition'
     ];
 
     /**
@@ -196,12 +180,8 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'ankama_id' => 'setAnkamaId',
-        'name' => 'setName',
-        'type' => 'setType',
-        'level' => 'setLevel',
-        'image_urls' => 'setImageUrls',
-        'recipe' => 'setRecipe'
+        'is_operand' => 'setIsOperand',
+        'condition' => 'setCondition'
     ];
 
     /**
@@ -210,12 +190,8 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'ankama_id' => 'getAnkamaId',
-        'name' => 'getName',
-        'type' => 'getType',
-        'level' => 'getLevel',
-        'image_urls' => 'getImageUrls',
-        'recipe' => 'getRecipe'
+        'is_operand' => 'getIsOperand',
+        'condition' => 'getCondition'
     ];
 
     /**
@@ -275,12 +251,8 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('ankama_id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('level', $data ?? [], null);
-        $this->setIfExists('image_urls', $data ?? [], null);
-        $this->setIfExists('recipe', $data ?? [], null);
+        $this->setIfExists('is_operand', $data ?? [], true);
+        $this->setIfExists('condition', $data ?? [], null);
     }
 
     /**
@@ -326,170 +298,55 @@ class ItemListEntry implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets ankama_id
+     * Gets is_operand
      *
-     * @return int|null
+     * @return bool|null
      */
-    public function getAnkamaId()
+    public function getIsOperand()
     {
-        return $this->container['ankama_id'];
+        return $this->container['is_operand'];
     }
 
     /**
-     * Sets ankama_id
+     * Sets is_operand
      *
-     * @param int|null $ankama_id ankama_id
+     * @param bool|null $is_operand always \"true\" for the leaf of a tree
      *
      * @return self
      */
-    public function setAnkamaId($ankama_id)
+    public function setIsOperand($is_operand)
     {
-        if (is_null($ankama_id)) {
-            throw new \InvalidArgumentException('non-nullable ankama_id cannot be null');
+        if (is_null($is_operand)) {
+            throw new \InvalidArgumentException('non-nullable is_operand cannot be null');
         }
-        $this->container['ankama_id'] = $ankama_id;
+        $this->container['is_operand'] = $is_operand;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets condition
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\ConditionEntry|null
      */
-    public function getName()
+    public function getCondition()
     {
-        return $this->container['name'];
+        return $this->container['condition'];
     }
 
     /**
-     * Sets name
+     * Sets condition
      *
-     * @param string|null $name name
+     * @param \OpenAPI\Client\Model\ConditionEntry|null $condition condition
      *
      * @return self
      */
-    public function setName($name)
+    public function setCondition($condition)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($condition)) {
+            throw new \InvalidArgumentException('non-nullable condition cannot be null');
         }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \OpenAPI\Client\Model\ItemsListEntryTypedType|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \OpenAPI\Client\Model\ItemsListEntryTypedType|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets level
-     *
-     * @return int|null
-     */
-    public function getLevel()
-    {
-        return $this->container['level'];
-    }
-
-    /**
-     * Sets level
-     *
-     * @param int|null $level level
-     *
-     * @return self
-     */
-    public function setLevel($level)
-    {
-        if (is_null($level)) {
-            throw new \InvalidArgumentException('non-nullable level cannot be null');
-        }
-        $this->container['level'] = $level;
-
-        return $this;
-    }
-
-    /**
-     * Gets image_urls
-     *
-     * @return \OpenAPI\Client\Model\ImageUrls|null
-     */
-    public function getImageUrls()
-    {
-        return $this->container['image_urls'];
-    }
-
-    /**
-     * Sets image_urls
-     *
-     * @param \OpenAPI\Client\Model\ImageUrls|null $image_urls image_urls
-     *
-     * @return self
-     */
-    public function setImageUrls($image_urls)
-    {
-        if (is_null($image_urls)) {
-            throw new \InvalidArgumentException('non-nullable image_urls cannot be null');
-        }
-        $this->container['image_urls'] = $image_urls;
-
-        return $this;
-    }
-
-    /**
-     * Gets recipe
-     *
-     * @return \OpenAPI\Client\Model\RecipeEntry[]|null
-     */
-    public function getRecipe()
-    {
-        return $this->container['recipe'];
-    }
-
-    /**
-     * Sets recipe
-     *
-     * @param \OpenAPI\Client\Model\RecipeEntry[]|null $recipe recipe
-     *
-     * @return self
-     */
-    public function setRecipe($recipe)
-    {
-        if (is_null($recipe)) {
-            array_push($this->openAPINullablesSetToNull, 'recipe');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('recipe', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['recipe'] = $recipe;
+        $this->container['condition'] = $condition;
 
         return $this;
     }

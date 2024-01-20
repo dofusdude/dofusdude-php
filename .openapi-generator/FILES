@@ -22,7 +22,9 @@ docs/Model/AlmanaxEntryTributeItem.md
 docs/Model/AlmanaxWebhook.md
 docs/Model/AlmanaxWebhookDailySettings.md
 docs/Model/ConditionEntry.md
-docs/Model/ConditionEntryElement.md
+docs/Model/ConditionTreeLeaf.md
+docs/Model/ConditionTreeNode.md
+docs/Model/ConditionTreeRelation.md
 docs/Model/Cosmetic.md
 docs/Model/CosmeticType.md
 docs/Model/CreateAlmanaxWebhook.md
@@ -80,7 +82,9 @@ lib/Model/AlmanaxEntryTributeItem.php
 lib/Model/AlmanaxWebhook.php
 lib/Model/AlmanaxWebhookDailySettings.php
 lib/Model/ConditionEntry.php
-lib/Model/ConditionEntryElement.php
+lib/Model/ConditionTreeLeaf.php
+lib/Model/ConditionTreeNode.php
+lib/Model/ConditionTreeRelation.php
 lib/Model/Cosmetic.php
 lib/Model/CosmeticType.php
 lib/Model/CreateAlmanaxWebhook.php
@@ -136,8 +140,10 @@ test/Model/AlmanaxEntryTributeItemTest.php
 test/Model/AlmanaxEntryTributeTest.php
 test/Model/AlmanaxWebhookDailySettingsTest.php
 test/Model/AlmanaxWebhookTest.php
-test/Model/ConditionEntryElementTest.php
 test/Model/ConditionEntryTest.php
+test/Model/ConditionTreeLeafTest.php
+test/Model/ConditionTreeNodeTest.php
+test/Model/ConditionTreeRelationTest.php
 test/Model/CosmeticTest.php
 test/Model/CosmeticTypeTest.php
 test/Model/CreateAlmanaxWebhookDailySettingsTest.php

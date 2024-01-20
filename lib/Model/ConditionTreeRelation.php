@@ -1,6 +1,6 @@
 <?php
 /**
- * ConditionEntryElement
+ * ConditionTreeRelation
  *
  * PHP version 7.4
  *
@@ -11,14 +11,14 @@
  */
 
 /**
- * Dofusdude
+ * dofusdude
  *
- * # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don't write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [DofuStuffSimulator](https://dofusstuffsimulator.netlify.app/)  I highly recommend using the SDKs for quick results. I use them myself for parts of the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).
+ * # A project for you - the developer. The all-in-one toolbelt for your next Ankama related project.  ## Client SDKs - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering game assets to high-res images with up to 800x800 px.  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply donate to that cause, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).
  *
- * The version of the OpenAPI document: 0.8.0
+ * The version of the OpenAPI document: 0.8.1
  * Contact: stelzo@steado.de
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 7.0.0-SNAPSHOT
+ * OpenAPI Generator version: 7.3.0-SNAPSHOT
  */
 
 /**
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ConditionEntryElement Class Doc Comment
+ * ConditionTreeRelation Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSerializable
+class ConditionTreeRelation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Condition_Entry_element';
+    protected static $openAPIModelName = 'Condition-Tree-Relation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,9 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'id' => 'int',
-        'is_meta' => 'bool'
+        'is_operand' => 'bool',
+        'relation' => 'string',
+        'children' => '\OpenAPI\Client\Model\ConditionTreeNode[]'
     ];
 
     /**
@@ -71,9 +71,9 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
-        'id' => null,
-        'is_meta' => null
+        'is_operand' => null,
+        'relation' => null,
+        'children' => null
     ];
 
     /**
@@ -82,9 +82,9 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
-		'id' => false,
-		'is_meta' => false
+        'is_operand' => false,
+        'relation' => false,
+        'children' => false
     ];
 
     /**
@@ -173,9 +173,9 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'id' => 'id',
-        'is_meta' => 'is_meta'
+        'is_operand' => 'is_operand',
+        'relation' => 'relation',
+        'children' => 'children'
     ];
 
     /**
@@ -184,9 +184,9 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'id' => 'setId',
-        'is_meta' => 'setIsMeta'
+        'is_operand' => 'setIsOperand',
+        'relation' => 'setRelation',
+        'children' => 'setChildren'
     ];
 
     /**
@@ -195,9 +195,9 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'id' => 'getId',
-        'is_meta' => 'getIsMeta'
+        'is_operand' => 'getIsOperand',
+        'relation' => 'getRelation',
+        'children' => 'getChildren'
     ];
 
     /**
@@ -257,9 +257,9 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('is_meta', $data ?? [], null);
+        $this->setIfExists('is_operand', $data ?? [], false);
+        $this->setIfExists('relation', $data ?? [], 'and');
+        $this->setIfExists('children', $data ?? [], null);
     }
 
     /**
@@ -305,82 +305,82 @@ class ConditionEntryElement implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_meta
+     * Gets is_operand
      *
      * @return bool|null
      */
-    public function getIsMeta()
+    public function getIsOperand()
     {
-        return $this->container['is_meta'];
+        return $this->container['is_operand'];
     }
 
     /**
-     * Sets is_meta
+     * Sets is_operand
      *
-     * @param bool|null $is_meta true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
+     * @param bool|null $is_operand always \"false\" for relations
      *
      * @return self
      */
-    public function setIsMeta($is_meta)
+    public function setIsOperand($is_operand)
     {
-        if (is_null($is_meta)) {
-            throw new \InvalidArgumentException('non-nullable is_meta cannot be null');
+        if (is_null($is_operand)) {
+            throw new \InvalidArgumentException('non-nullable is_operand cannot be null');
         }
-        $this->container['is_meta'] = $is_meta;
+        $this->container['is_operand'] = $is_operand;
+
+        return $this;
+    }
+
+    /**
+     * Gets relation
+     *
+     * @return string|null
+     */
+    public function getRelation()
+    {
+        return $this->container['relation'];
+    }
+
+    /**
+     * Sets relation
+     *
+     * @param string|null $relation \"and\", \"or\"
+     *
+     * @return self
+     */
+    public function setRelation($relation)
+    {
+        if (is_null($relation)) {
+            throw new \InvalidArgumentException('non-nullable relation cannot be null');
+        }
+        $this->container['relation'] = $relation;
+
+        return $this;
+    }
+
+    /**
+     * Gets children
+     *
+     * @return \OpenAPI\Client\Model\ConditionTreeNode[]|null
+     */
+    public function getChildren()
+    {
+        return $this->container['children'];
+    }
+
+    /**
+     * Sets children
+     *
+     * @param \OpenAPI\Client\Model\ConditionTreeNode[]|null $children children
+     *
+     * @return self
+     */
+    public function setChildren($children)
+    {
+        if (is_null($children)) {
+            throw new \InvalidArgumentException('non-nullable children cannot be null');
+        }
+        $this->container['children'] = $children;
 
         return $this;
     }
