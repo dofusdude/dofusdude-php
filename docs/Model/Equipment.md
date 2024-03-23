@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **conditions** | [**\OpenAPI\Client\Model\ConditionEntry[]**](ConditionEntry.md) |  | [optional]
 **condition_tree** | [**\OpenAPI\Client\Model\ConditionTreeNode**](ConditionTreeNode.md) |  | [optional]
 **recipe** | [**\OpenAPI\Client\Model\RecipeEntry[]**](RecipeEntry.md) |  | [optional]
-**parent_set** | [**\OpenAPI\Client\Model\EquipmentParentSet**](EquipmentParentSet.md) |  | [optional]
+**parent_set** | [**\OpenAPI\Client\Model\ItemListEntryParentSet**](ItemListEntryParentSet.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

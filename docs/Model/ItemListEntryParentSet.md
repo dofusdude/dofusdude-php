@@ -1,4 +1,4 @@
-# # EquipmentParentSet
+# # ItemListEntryParentSet
 
 ## Properties
 

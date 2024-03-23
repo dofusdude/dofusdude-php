@@ -22,6 +22,6 @@ Name | Type | Description | Notes
 **ap_cost** | **int** |  | [optional]
 **range** | [**\OpenAPI\Client\Model\WeaponRange**](WeaponRange.md) |  | [optional]
 **recipe** | [**\OpenAPI\Client\Model\RecipeEntry[]**](RecipeEntry.md) |  | [optional]
-**parent_set** | [**\OpenAPI\Client\Model\EquipmentParentSet**](EquipmentParentSet.md) |  | [optional]
+**parent_set** | [**\OpenAPI\Client\Model\ItemListEntryParentSet**](ItemListEntryParentSet.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

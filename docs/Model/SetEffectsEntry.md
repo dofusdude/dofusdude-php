@@ -1,4 +1,4 @@
-# # EffectsEntry
+# # SetEffectsEntry
 
 ## Properties
 
@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **ignore_int_min** | **bool** | ignore the int min field because the actual value is a string. For readability the templated field is the only important field in this case. | [optional]
 **ignore_int_max** | **bool** | ignore the int max field, if ignore_int_min is true, int min is a single value | [optional]
 **formatted** | **string** | all fields from above encoded in a single string | [optional]
+**item_combination** | **int** | how many items it needs to trigger this effect with the given set | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

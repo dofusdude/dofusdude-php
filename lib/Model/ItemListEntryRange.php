@@ -1,6 +1,6 @@
 <?php
 /**
- * GetGameSearch200ResponseInner
+ * ItemListEntryRange
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * GetGameSearch200ResponseInner Class Doc Comment
+ * ItemListEntryRange Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class ItemListEntryRange implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'get_game_search_200_response_inner';
+    protected static $openAPIModelName = 'Item_List_Entry_range';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,8 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'ankama_id' => 'int',
-        'type' => 'string'
+        'min' => 'int',
+        'max' => 'int'
     ];
 
     /**
@@ -71,9 +70,8 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
-        'ankama_id' => null,
-        'type' => null
+        'min' => null,
+        'max' => null
     ];
 
     /**
@@ -82,9 +80,8 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
-        'ankama_id' => false,
-        'type' => false
+        'min' => false,
+        'max' => false
     ];
 
     /**
@@ -173,9 +170,8 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'ankama_id' => 'ankama_id',
-        'type' => 'type'
+        'min' => 'min',
+        'max' => 'max'
     ];
 
     /**
@@ -184,9 +180,8 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'ankama_id' => 'setAnkamaId',
-        'type' => 'setType'
+        'min' => 'setMin',
+        'max' => 'setMax'
     ];
 
     /**
@@ -195,9 +190,8 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'ankama_id' => 'getAnkamaId',
-        'type' => 'getType'
+        'min' => 'getMin',
+        'max' => 'getMax'
     ];
 
     /**
@@ -257,9 +251,8 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('ankama_id', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('min', $data ?? [], null);
+        $this->setIfExists('max', $data ?? [], null);
     }
 
     /**
@@ -305,82 +298,55 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name Name of the hit. The query could still have matched with the description only.
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets ankama_id
+     * Gets min
      *
      * @return int|null
      */
-    public function getAnkamaId()
+    public function getMin()
     {
-        return $this->container['ankama_id'];
+        return $this->container['min'];
     }
 
     /**
-     * Sets ankama_id
+     * Sets min
      *
-     * @param int|null $ankama_id Ankama ID for retrieving more details in the type specific endpoint.
+     * @param int|null $min min
      *
      * @return self
      */
-    public function setAnkamaId($ankama_id)
+    public function setMin($min)
     {
-        if (is_null($ankama_id)) {
-            throw new \InvalidArgumentException('non-nullable ankama_id cannot be null');
+        if (is_null($min)) {
+            throw new \InvalidArgumentException('non-nullable min cannot be null');
         }
-        $this->container['ankama_id'] = $ankama_id;
+        $this->container['min'] = $min;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets max
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getType()
+    public function getMax()
     {
-        return $this->container['type'];
+        return $this->container['max'];
     }
 
     /**
-     * Sets type
+     * Sets max
      *
-     * @param string|null $type Type classification
+     * @param int|null $max max
      *
      * @return self
      */
-    public function setType($type)
+    public function setMax($max)
     {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        if (is_null($max)) {
+            throw new \InvalidArgumentException('non-nullable max cannot be null');
         }
-        $this->container['type'] = $type;
+        $this->container['max'] = $max;
 
         return $this;
     }

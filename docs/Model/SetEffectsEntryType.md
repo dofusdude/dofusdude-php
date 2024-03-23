@@ -1,4 +1,4 @@
-# # EffectsEntryType
+# # SetEffectsEntryType
 
 ## Properties
 

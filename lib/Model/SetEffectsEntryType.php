@@ -1,6 +1,6 @@
 <?php
 /**
- * GetGameSearch200ResponseInner
+ * SetEffectsEntryType
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * GetGameSearch200ResponseInner Class Doc Comment
+ * SetEffectsEntryType Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \JsonSerializable
+class SetEffectsEntryType implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'get_game_search_200_response_inner';
+    protected static $openAPIModelName = 'Set_Effects_Entry_type';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,9 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'ankama_id' => 'int',
-        'type' => 'string'
+        'id' => 'int',
+        'is_meta' => 'bool',
+        'is_active' => 'bool'
     ];
 
     /**
@@ -72,8 +73,9 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'ankama_id' => null,
-        'type' => null
+        'id' => null,
+        'is_meta' => null,
+        'is_active' => null
     ];
 
     /**
@@ -83,8 +85,9 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
       */
     protected static array $openAPINullables = [
         'name' => false,
-        'ankama_id' => false,
-        'type' => false
+        'id' => false,
+        'is_meta' => false,
+        'is_active' => false
     ];
 
     /**
@@ -174,8 +177,9 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'ankama_id' => 'ankama_id',
-        'type' => 'type'
+        'id' => 'id',
+        'is_meta' => 'is_meta',
+        'is_active' => 'is_active'
     ];
 
     /**
@@ -185,8 +189,9 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $setters = [
         'name' => 'setName',
-        'ankama_id' => 'setAnkamaId',
-        'type' => 'setType'
+        'id' => 'setId',
+        'is_meta' => 'setIsMeta',
+        'is_active' => 'setIsActive'
     ];
 
     /**
@@ -196,8 +201,9 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $getters = [
         'name' => 'getName',
-        'ankama_id' => 'getAnkamaId',
-        'type' => 'getType'
+        'id' => 'getId',
+        'is_meta' => 'getIsMeta',
+        'is_active' => 'getIsActive'
     ];
 
     /**
@@ -258,8 +264,9 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
     public function __construct(array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('ankama_id', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('is_meta', $data ?? [], null);
+        $this->setIfExists('is_active', $data ?? [], null);
     }
 
     /**
@@ -317,7 +324,7 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets name
      *
-     * @param string|null $name Name of the hit. The query could still have matched with the description only.
+     * @param string|null $name name
      *
      * @return self
      */
@@ -332,55 +339,82 @@ class GetGameSearch200ResponseInner implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets ankama_id
+     * Gets id
      *
      * @return int|null
      */
-    public function getAnkamaId()
+    public function getId()
     {
-        return $this->container['ankama_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets ankama_id
+     * Sets id
      *
-     * @param int|null $ankama_id Ankama ID for retrieving more details in the type specific endpoint.
+     * @param int|null $id id
      *
      * @return self
      */
-    public function setAnkamaId($ankama_id)
+    public function setId($id)
     {
-        if (is_null($ankama_id)) {
-            throw new \InvalidArgumentException('non-nullable ankama_id cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['ankama_id'] = $ankama_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets is_meta
      *
-     * @return string|null
+     * @return bool|null
      */
-    public function getType()
+    public function getIsMeta()
     {
-        return $this->container['type'];
+        return $this->container['is_meta'];
     }
 
     /**
-     * Sets type
+     * Sets is_meta
      *
-     * @param string|null $type Type classification
+     * @param bool|null $is_meta true if a type is generated from the Api instead of Ankama. In that case, always prefer showing the templated string and omit everything else. The \"name\" field will have an english description of the meta type. An example for such effects are class sets effects.
      *
      * @return self
      */
-    public function setType($type)
+    public function setIsMeta($is_meta)
     {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        if (is_null($is_meta)) {
+            throw new \InvalidArgumentException('non-nullable is_meta cannot be null');
         }
-        $this->container['type'] = $type;
+        $this->container['is_meta'] = $is_meta;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_active
+     *
+     * @return bool|null
+     */
+    public function getIsActive()
+    {
+        return $this->container['is_active'];
+    }
+
+    /**
+     * Sets is_active
+     *
+     * @param bool|null $is_active Affects target or source actively.
+     *
+     * @return self
+     */
+    public function setIsActive($is_active)
+    {
+        if (is_null($is_active)) {
+            throw new \InvalidArgumentException('non-nullable is_active cannot be null');
+        }
+        $this->container['is_active'] = $is_active;
 
         return $this;
     }
