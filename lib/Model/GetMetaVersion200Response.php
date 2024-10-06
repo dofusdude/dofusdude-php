@@ -1,6 +1,6 @@
 <?php
 /**
- * PutTwitterWebhook
+ * GetMetaVersion200Response
  *
  * PHP version 7.4
  *
@@ -33,16 +33,15 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * PutTwitterWebhook Class Doc Comment
+ * GetMetaVersion200Response Class Doc Comment
  *
  * @category Class
- * @description 
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetMetaVersion200Response implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +50,7 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'PutTwitterWebhook';
+    protected static $openAPIModelName = 'get_meta_version_200_response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +58,9 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'whitelist' => 'string[]',
-        'blacklist' => 'string[]',
-        'subscriptions' => 'string[]',
-        'preview_length' => 'int'
+        'version' => 'string',
+        'release' => 'string',
+        'update_stamp' => 'string'
     ];
 
     /**
@@ -73,10 +71,9 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'whitelist' => null,
-        'blacklist' => null,
-        'subscriptions' => null,
-        'preview_length' => 'int32'
+        'version' => null,
+        'release' => null,
+        'update_stamp' => null
     ];
 
     /**
@@ -85,10 +82,9 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'whitelist' => true,
-        'blacklist' => true,
-        'subscriptions' => true,
-        'preview_length' => true
+        'version' => false,
+        'release' => false,
+        'update_stamp' => false
     ];
 
     /**
@@ -177,10 +173,9 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'whitelist' => 'whitelist',
-        'blacklist' => 'blacklist',
-        'subscriptions' => 'subscriptions',
-        'preview_length' => 'preview_length'
+        'version' => 'version',
+        'release' => 'release',
+        'update_stamp' => 'update_stamp'
     ];
 
     /**
@@ -189,10 +184,9 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'whitelist' => 'setWhitelist',
-        'blacklist' => 'setBlacklist',
-        'subscriptions' => 'setSubscriptions',
-        'preview_length' => 'setPreviewLength'
+        'version' => 'setVersion',
+        'release' => 'setRelease',
+        'update_stamp' => 'setUpdateStamp'
     ];
 
     /**
@@ -201,10 +195,9 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'whitelist' => 'getWhitelist',
-        'blacklist' => 'getBlacklist',
-        'subscriptions' => 'getSubscriptions',
-        'preview_length' => 'getPreviewLength'
+        'version' => 'getVersion',
+        'release' => 'getRelease',
+        'update_stamp' => 'getUpdateStamp'
     ];
 
     /**
@@ -264,10 +257,9 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('whitelist', $data ?? [], null);
-        $this->setIfExists('blacklist', $data ?? [], null);
-        $this->setIfExists('subscriptions', $data ?? [], null);
-        $this->setIfExists('preview_length', $data ?? [], null);
+        $this->setIfExists('version', $data ?? [], null);
+        $this->setIfExists('release', $data ?? [], null);
+        $this->setIfExists('update_stamp', $data ?? [], null);
     }
 
     /**
@@ -297,14 +289,6 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['preview_length']) && ($this->container['preview_length'] > 280)) {
-            $invalidProperties[] = "invalid value for 'preview_length', must be smaller than or equal to 280.";
-        }
-
-        if (!is_null($this->container['preview_length']) && ($this->container['preview_length'] < 0)) {
-            $invalidProperties[] = "invalid value for 'preview_length', must be bigger than or equal to 0.";
-        }
-
         return $invalidProperties;
     }
 
@@ -321,147 +305,82 @@ class PutTwitterWebhook implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets whitelist
+     * Gets version
      *
-     * @return string[]|null
+     * @return string|null
      */
-    public function getWhitelist()
+    public function getVersion()
     {
-        return $this->container['whitelist'];
+        return $this->container['version'];
     }
 
     /**
-     * Sets whitelist
+     * Sets version
      *
-     * @param string[]|null $whitelist whitelist
+     * @param string|null $version version
      *
      * @return self
      */
-    public function setWhitelist($whitelist)
+    public function setVersion($version)
     {
-        if (is_null($whitelist)) {
-            array_push($this->openAPINullablesSetToNull, 'whitelist');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('whitelist', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($version)) {
+            throw new \InvalidArgumentException('non-nullable version cannot be null');
         }
-        $this->container['whitelist'] = $whitelist;
+        $this->container['version'] = $version;
 
         return $this;
     }
 
     /**
-     * Gets blacklist
+     * Gets release
      *
-     * @return string[]|null
+     * @return string|null
      */
-    public function getBlacklist()
+    public function getRelease()
     {
-        return $this->container['blacklist'];
+        return $this->container['release'];
     }
 
     /**
-     * Sets blacklist
+     * Sets release
      *
-     * @param string[]|null $blacklist blacklist
+     * @param string|null $release release
      *
      * @return self
      */
-    public function setBlacklist($blacklist)
+    public function setRelease($release)
     {
-        if (is_null($blacklist)) {
-            array_push($this->openAPINullablesSetToNull, 'blacklist');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('blacklist', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($release)) {
+            throw new \InvalidArgumentException('non-nullable release cannot be null');
         }
-        $this->container['blacklist'] = $blacklist;
+        $this->container['release'] = $release;
 
         return $this;
     }
 
     /**
-     * Gets subscriptions
+     * Gets update_stamp
      *
-     * @return string[]|null
+     * @return string|null
      */
-    public function getSubscriptions()
+    public function getUpdateStamp()
     {
-        return $this->container['subscriptions'];
+        return $this->container['update_stamp'];
     }
 
     /**
-     * Sets subscriptions
+     * Sets update_stamp
      *
-     * @param string[]|null $subscriptions Get the available subscriptions with /meta/webhooks/twitter
+     * @param string|null $update_stamp update_stamp
      *
      * @return self
      */
-    public function setSubscriptions($subscriptions)
+    public function setUpdateStamp($update_stamp)
     {
-        if (is_null($subscriptions)) {
-            array_push($this->openAPINullablesSetToNull, 'subscriptions');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('subscriptions', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($update_stamp)) {
+            throw new \InvalidArgumentException('non-nullable update_stamp cannot be null');
         }
-
-
-        $this->container['subscriptions'] = $subscriptions;
-
-        return $this;
-    }
-
-    /**
-     * Gets preview_length
-     *
-     * @return int|null
-     */
-    public function getPreviewLength()
-    {
-        return $this->container['preview_length'];
-    }
-
-    /**
-     * Sets preview_length
-     *
-     * @param int|null $preview_length preview_length
-     *
-     * @return self
-     */
-    public function setPreviewLength($preview_length)
-    {
-        if (is_null($preview_length)) {
-            array_push($this->openAPINullablesSetToNull, 'preview_length');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('preview_length', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-
-        if (!is_null($preview_length) && ($preview_length > 280)) {
-            throw new \InvalidArgumentException('invalid value for $preview_length when calling PutTwitterWebhook., must be smaller than or equal to 280.');
-        }
-        if (!is_null($preview_length) && ($preview_length < 0)) {
-            throw new \InvalidArgumentException('invalid value for $preview_length when calling PutTwitterWebhook., must be bigger than or equal to 0.');
-        }
-
-        $this->container['preview_length'] = $preview_length;
+        $this->container['update_stamp'] = $update_stamp;
 
         return $this;
     }

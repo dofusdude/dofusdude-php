@@ -81,7 +81,7 @@ No authorization required
 ## `getCosmeticsList()`
 
 ```php
-getCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item): \OpenAPI\Client\Model\ItemsListPaged
+getCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item, $filter_type_enum): \OpenAPI\Client\Model\ItemsListPaged
 ```
 
 List Cosmetics
@@ -110,9 +110,10 @@ $filter_max_level = 5; // int | only results which level is equal or below this 
 $page_size = 5; // int | size of the results from the list. -1 disables pagination and gets all in one response.
 $page_number = 1; // int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 $fields_item = ["recipe"]; // string[] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+$filter_type_enum = ["ceremonial-hat"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item);
+    $result = $apiInstance->getCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item, $filter_type_enum);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CosmeticsApi->getCosmeticsList: ', $e->getMessage(), PHP_EOL;
@@ -132,6 +133,7 @@ try {
 | **page_size** | **int**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] |
 | **page_number** | **int**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] |
 | **fields_item** | [**string[]**](../Model/string.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] |
+| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 
@@ -153,7 +155,7 @@ No authorization required
 ## `getCosmeticsSearch()`
 
 ```php
-getCosmeticsSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit): \OpenAPI\Client\Model\ItemListEntry[]
+getCosmeticsSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum): \OpenAPI\Client\Model\ItemListEntry[]
 ```
 
 Search Cosmetics
@@ -176,13 +178,14 @@ $apiInstance = new OpenAPI\Client\Api\CosmeticsApi(
 $language = 'language_example'; // string | a valid language code
 $game = dofus2; // string
 $query = nedora; // string | case sensitive search query
-$filter_type_name = Costume; // string | only results with the translated type name
+$filter_type_name = Wings; // string | only results with the translated type name
 $filter_min_level = 1; // int | only results which level is equal or above this value
 $filter_max_level = 2; // int | only results which level is equal or below this value
 $limit = 8; // int | maximum number of returned results
+$filter_type_enum = ["wings"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getCosmeticsSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit);
+    $result = $apiInstance->getCosmeticsSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CosmeticsApi->getCosmeticsSearch: ', $e->getMessage(), PHP_EOL;
@@ -200,6 +203,7 @@ try {
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
+| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 

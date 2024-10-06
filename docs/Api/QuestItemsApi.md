@@ -141,7 +141,7 @@ No authorization required
 ## `getItemsQuestList()`
 
 ```php
-getItemsQuestList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item): \OpenAPI\Client\Model\ItemsListPaged
+getItemsQuestList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item, $filter_type_enum): \OpenAPI\Client\Model\ItemsListPaged
 ```
 
 List Quest Items
@@ -170,9 +170,10 @@ $filter_max_level = 50; // int | only results which level is equal or below this
 $page_size = 5; // int | size of the results from the list. -1 disables pagination and gets all in one response.
 $page_number = 1; // int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 $fields_item = ["recipe"]; // string[] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+$filter_type_enum = ["sufokia"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getItemsQuestList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item);
+    $result = $apiInstance->getItemsQuestList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item, $filter_type_enum);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestItemsApi->getItemsQuestList: ', $e->getMessage(), PHP_EOL;
@@ -192,6 +193,7 @@ try {
 | **page_size** | **int**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] |
 | **page_number** | **int**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] |
 | **fields_item** | [**string[]**](../Model/string.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] |
+| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 
@@ -213,7 +215,7 @@ No authorization required
 ## `getItemsQuestSearch()`
 
 ```php
-getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit): \OpenAPI\Client\Model\ItemListEntry[]
+getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum): \OpenAPI\Client\Model\ItemListEntry[]
 ```
 
 Search Quest Items
@@ -240,9 +242,10 @@ $filter_type_name = Justicieros; // string | only results with the translated ty
 $filter_min_level = 60; // int | only results which level is equal or above this value
 $filter_max_level = 70; // int | only results which level is equal or below this value
 $limit = 8; // int | maximum number of returned results
+$filter_type_enum = ["vigilantes"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit);
+    $result = $apiInstance->getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestItemsApi->getItemsQuestSearch: ', $e->getMessage(), PHP_EOL;
@@ -260,6 +263,7 @@ try {
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
+| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 

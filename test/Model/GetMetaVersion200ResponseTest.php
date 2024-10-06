@@ -1,6 +1,6 @@
 <?php
 /**
- * TwitterWebhookTest
+ * GetMetaVersion200ResponseTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * TwitterWebhookTest Class Doc Comment
+ * GetMetaVersion200ResponseTest Class Doc Comment
  *
  * @category    Class
- * @description TwitterWebhook
+ * @description GetMetaVersion200Response
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class TwitterWebhookTest extends TestCase
+class GetMetaVersion200ResponseTest extends TestCase
 {
 
     /**
@@ -72,90 +72,36 @@ class TwitterWebhookTest extends TestCase
     }
 
     /**
-     * Test "TwitterWebhook"
+     * Test "GetMetaVersion200Response"
      */
-    public function testTwitterWebhook()
+    public function testGetMetaVersion200Response()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "version"
      */
-    public function testPropertyId()
+    public function testPropertyVersion()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "whitelist"
+     * Test attribute "release"
      */
-    public function testPropertyWhitelist()
+    public function testPropertyRelease()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "blacklist"
+     * Test attribute "update_stamp"
      */
-    public function testPropertyBlacklist()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "subscriptions"
-     */
-    public function testPropertySubscriptions()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "format"
-     */
-    public function testPropertyFormat()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "preview_length"
-     */
-    public function testPropertyPreviewLength()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "last_fired_at"
-     */
-    public function testPropertyLastFiredAt()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
+    public function testPropertyUpdateStamp()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

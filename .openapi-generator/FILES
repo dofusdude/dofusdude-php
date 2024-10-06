@@ -37,6 +37,7 @@ docs/Model/Equipment.md
 docs/Model/EquipmentSet.md
 docs/Model/GetGameSearch200ResponseInner.md
 docs/Model/GetMetaAlmanaxBonuses200ResponseInner.md
+docs/Model/GetMetaVersion200Response.md
 docs/Model/GetMetaWebhooksTwitter200Response.md
 docs/Model/ImageUrls.md
 docs/Model/ItemListEntry.md
@@ -99,6 +100,7 @@ lib/Model/Equipment.php
 lib/Model/EquipmentSet.php
 lib/Model/GetGameSearch200ResponseInner.php
 lib/Model/GetMetaAlmanaxBonuses200ResponseInner.php
+lib/Model/GetMetaVersion200Response.php
 lib/Model/GetMetaWebhooksTwitter200Response.php
 lib/Model/ImageUrls.php
 lib/Model/ItemListEntry.php
@@ -160,6 +162,7 @@ test/Model/EquipmentSetTest.php
 test/Model/EquipmentTest.php
 test/Model/GetGameSearch200ResponseInnerTest.php
 test/Model/GetMetaAlmanaxBonuses200ResponseInnerTest.php
+test/Model/GetMetaVersion200ResponseTest.php
 test/Model/GetMetaWebhooksTwitter200ResponseTest.php
 test/Model/ImageUrlsTest.php
 test/Model/ItemListEntryParentSetTest.php

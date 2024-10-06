@@ -5,9 +5,11 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**getGameSearchTypes()**](MetaApi.md#getGameSearchTypes) | **GET** /dofus2/meta/search/types | Available Game Search Types |
+| [**getItemTypes()**](MetaApi.md#getItemTypes) | **GET** /dofus2/meta/items/types | Available Item Types |
 | [**getMetaAlmanaxBonuses()**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses |
 | [**getMetaAlmanaxBonusesSearch()**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses |
 | [**getMetaElements()**](MetaApi.md#getMetaElements) | **GET** /dofus2/meta/elements | Effects and Condition Elements |
+| [**getMetaVersion()**](MetaApi.md#getMetaVersion) | **GET** /dofus2/meta/version | Game Version |
 
 
 ## `getGameSearchTypes()`
@@ -39,6 +41,59 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MetaApi->getGameSearchTypes: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**string[]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getItemTypes()`
+
+```php
+getItemTypes(): string[]
+```
+
+Available Item Types
+
+Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints. All names are english for comparing them inside applications. Ordering is not guaranteed to persist with game updates.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\MetaApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->getItemTypes();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetaApi->getItemTypes: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -218,6 +273,59 @@ This endpoint does not need any parameter.
 ### Return type
 
 **string[]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getMetaVersion()`
+
+```php
+getMetaVersion(): \OpenAPI\Client\Model\GetMetaVersion200Response
+```
+
+Game Version
+
+The current game version of the hosted data.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\MetaApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->getMetaVersion();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetaApi->getMetaVersion: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\GetMetaVersion200Response**](../Model/GetMetaVersion200Response.md)
 
 ### Authorization
 
