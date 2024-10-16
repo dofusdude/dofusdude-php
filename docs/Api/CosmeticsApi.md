@@ -13,7 +13,7 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 ## `getAllCosmeticsList()`
 
 ```php
-getAllCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $accept_encoding): \OpenAPI\Client\Model\ItemsListPaged
+getAllCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $accept_encoding, $filter_type_enum): \OpenAPI\Client\Model\ItemsListPaged
 ```
 
 List All Cosmetics
@@ -40,9 +40,10 @@ $filter_type_name = Chapeau d'apparat; // string | only results with the transla
 $filter_min_level = 1; // int | only results which level is equal or above this value
 $filter_max_level = 5; // int | only results which level is equal or below this value
 $accept_encoding = 'accept_encoding_example'; // string | optional compression for saving bandwidth
+$filter_type_enum = ["boots"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getAllCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $accept_encoding);
+    $result = $apiInstance->getAllCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $accept_encoding, $filter_type_enum);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CosmeticsApi->getAllCosmeticsList: ', $e->getMessage(), PHP_EOL;
@@ -60,6 +61,7 @@ try {
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |
 | **accept_encoding** | **string**| optional compression for saving bandwidth | [optional] |
+| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 

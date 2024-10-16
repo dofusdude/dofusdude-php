@@ -13,7 +13,7 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 ## `getAllSetsList()`
 
 ```php
-getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding): \OpenAPI\Client\Model\SetsListPaged
+getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_is_cosmetic): \OpenAPI\Client\Model\SetsListPaged
 ```
 
 List All Sets
@@ -39,9 +39,10 @@ $sort_level = asc; // string | sort the resulting list by level, default unsorte
 $filter_min_highest_equipment_level = 190; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
 $accept_encoding = 'accept_encoding_example'; // string | optional compression for saving bandwidth
+$filter_is_cosmetic = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
 
 try {
-    $result = $apiInstance->getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding);
+    $result = $apiInstance->getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_is_cosmetic);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SetsApi->getAllSetsList: ', $e->getMessage(), PHP_EOL;
@@ -58,6 +59,7 @@ try {
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
 | **accept_encoding** | **string**| optional compression for saving bandwidth | [optional] |
+| **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
 
 ### Return type
 
@@ -79,7 +81,7 @@ No authorization required
 ## `getSetsList()`
 
 ```php
-getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set): \OpenAPI\Client\Model\SetsListPaged
+getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_is_cosmetic): \OpenAPI\Client\Model\SetsListPaged
 ```
 
 List Sets
@@ -107,9 +109,10 @@ $filter_max_highest_equipment_level = 200; // int | only results where the equip
 $page_size = 20; // int | size of the results from the list. -1 disables pagination and gets all in one response.
 $page_number = 1; // int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 $fields_set = ["equipment_ids"]; // string[] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+$filter_is_cosmetic = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
 
 try {
-    $result = $apiInstance->getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set);
+    $result = $apiInstance->getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_is_cosmetic);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SetsApi->getSetsList: ', $e->getMessage(), PHP_EOL;
@@ -128,6 +131,7 @@ try {
 | **page_size** | **int**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] |
 | **page_number** | **int**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] |
 | **fields_set** | [**string[]**](../Model/string.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] |
+| **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
 
 ### Return type
 
@@ -149,7 +153,7 @@ No authorization required
 ## `getSetsSearch()`
 
 ```php
-getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit): \OpenAPI\Client\Model\SetListEntry[]
+getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic): \OpenAPI\Client\Model\SetListEntry[]
 ```
 
 Search Sets
@@ -175,9 +179,10 @@ $query = Des; // string | case sensitive search query
 $filter_min_highest_equipment_level = 195; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
 $limit = 8; // int | maximum number of returned results
+$filter_is_cosmetic = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
 
 try {
-    $result = $apiInstance->getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit);
+    $result = $apiInstance->getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SetsApi->getSetsSearch: ', $e->getMessage(), PHP_EOL;
@@ -194,6 +199,7 @@ try {
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
+| **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
 
 ### Return type
 
