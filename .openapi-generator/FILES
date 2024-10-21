@@ -25,8 +25,6 @@ docs/Model/ConditionEntry.md
 docs/Model/ConditionTreeLeaf.md
 docs/Model/ConditionTreeNode.md
 docs/Model/ConditionTreeRelation.md
-docs/Model/Cosmetic.md
-docs/Model/CosmeticType.md
 docs/Model/CreateAlmanaxWebhook.md
 docs/Model/CreateAlmanaxWebhookDailySettings.md
 docs/Model/CreateAlmanaxWebhookMentionsValueInner.md
@@ -55,6 +53,7 @@ docs/Model/PutRSSWebhook.md
 docs/Model/PutTwitterWebhook.md
 docs/Model/RecipeEntry.md
 docs/Model/Resource.md
+docs/Model/ResourceType.md
 docs/Model/RssWebhook.md
 docs/Model/SetEffectsEntry.md
 docs/Model/SetEffectsEntryType.md
@@ -88,8 +87,6 @@ lib/Model/ConditionEntry.php
 lib/Model/ConditionTreeLeaf.php
 lib/Model/ConditionTreeNode.php
 lib/Model/ConditionTreeRelation.php
-lib/Model/Cosmetic.php
-lib/Model/CosmeticType.php
 lib/Model/CreateAlmanaxWebhook.php
 lib/Model/CreateAlmanaxWebhookDailySettings.php
 lib/Model/CreateAlmanaxWebhookMentionsValueInner.php
@@ -119,6 +116,7 @@ lib/Model/PutRSSWebhook.php
 lib/Model/PutTwitterWebhook.php
 lib/Model/RecipeEntry.php
 lib/Model/Resource.php
+lib/Model/ResourceType.php
 lib/Model/RssWebhook.php
 lib/Model/SetEffectsEntry.php
 lib/Model/SetEffectsEntryType.php
@@ -150,8 +148,6 @@ test/Model/ConditionEntryTest.php
 test/Model/ConditionTreeLeafTest.php
 test/Model/ConditionTreeNodeTest.php
 test/Model/ConditionTreeRelationTest.php
-test/Model/CosmeticTest.php
-test/Model/CosmeticTypeTest.php
 test/Model/CreateAlmanaxWebhookDailySettingsTest.php
 test/Model/CreateAlmanaxWebhookMentionsValueInnerTest.php
 test/Model/CreateAlmanaxWebhookTest.php
@@ -180,6 +176,7 @@ test/Model/PutRSSWebhookTest.php
 test/Model/PutTwitterWebhookTest.php
 test/Model/RecipeEntryTest.php
 test/Model/ResourceTest.php
+test/Model/ResourceTypeTest.php
 test/Model/RssWebhookTest.php
 test/Model/SetEffectsEntryTest.php
 test/Model/SetEffectsEntryTypeTest.php

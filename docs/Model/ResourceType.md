@@ -1,4 +1,4 @@
-# # CosmeticType
+# # ResourceType
 
 ## Properties
 

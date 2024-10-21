@@ -112,7 +112,7 @@ $filter_max_level = 5; // int | only results which level is equal or below this 
 $page_size = 5; // int | size of the results from the list. -1 disables pagination and gets all in one response.
 $page_number = 1; // int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 $fields_item = ["recipe"]; // string[] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
-$filter_type_enum = ["ceremonial-hat"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+$filter_type_enum = array('filter_type_enum_example'); // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
     $result = $apiInstance->getCosmeticsList($language, $game, $sort_level, $filter_type_name, $filter_min_level, $filter_max_level, $page_size, $page_number, $fields_item, $filter_type_enum);
@@ -227,7 +227,7 @@ No authorization required
 ## `getCosmeticsSingle()`
 
 ```php
-getCosmeticsSingle($language, $ankama_id, $game): \OpenAPI\Client\Model\Cosmetic
+getCosmeticsSingle($language, $ankama_id, $game): \OpenAPI\Client\Model\Equipment
 ```
 
 Single Cosmetics
@@ -269,7 +269,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Cosmetic**](../Model/Cosmetic.md)
+[**\OpenAPI\Client\Model\Equipment**](../Model/Equipment.md)
 
 ### Authorization
 

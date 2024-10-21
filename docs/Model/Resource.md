@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ankama_id** | **int** |  | [optional]
 **name** | **string** |  | [optional]
 **description** | **string** |  | [optional]
-**type** | [**\OpenAPI\Client\Model\CosmeticType**](CosmeticType.md) |  | [optional]
+**type** | [**\OpenAPI\Client\Model\ResourceType**](ResourceType.md) |  | [optional]
 **level** | **int** |  | [optional]
 **pods** | **int** |  | [optional]
 **image_urls** | [**\OpenAPI\Client\Model\ImageUrls**](ImageUrls.md) |  | [optional]
