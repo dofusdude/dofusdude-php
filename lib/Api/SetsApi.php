@@ -149,7 +149,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListSets|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \OpenAPI\Client\Model\ListEquipmentSets|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
      */
     public function getAllSetsList($language, $game, $sort_level = null, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $accept_encoding = null, $filter_contains_cosmetics_only = null, $filter_contains_cosmetics = null, string $contentType = self::contentTypes['getAllSetsList'][0])
     {
@@ -174,7 +174,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListSets|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ListEquipmentSets|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllSetsListWithHttpInfo($language, $game, $sort_level = null, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $accept_encoding = null, $filter_contains_cosmetics_only = null, $filter_contains_cosmetics = null, string $contentType = self::contentTypes['getAllSetsList'][0])
     {
@@ -205,11 +205,11 @@ class SetsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListSets' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\ListEquipmentSets' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListSets' !== 'string') {
+                        if ('\OpenAPI\Client\Model\ListEquipmentSets' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,7 +227,7 @@ class SetsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListSets', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListEquipmentSets', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -300,7 +300,7 @@ class SetsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListSets';
+            $returnType = '\OpenAPI\Client\Model\ListEquipmentSets';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -333,7 +333,7 @@ class SetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListSets',
+                        '\OpenAPI\Client\Model\ListEquipmentSets',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -407,7 +407,7 @@ class SetsApi
      */
     public function getAllSetsListAsyncWithHttpInfo($language, $game, $sort_level = null, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $accept_encoding = null, $filter_contains_cosmetics_only = null, $filter_contains_cosmetics = null, string $contentType = self::contentTypes['getAllSetsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ListSets';
+        $returnType = '\OpenAPI\Client\Model\ListEquipmentSets';
         $request = $this->getAllSetsListRequest($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_contains_cosmetics_only, $filter_contains_cosmetics, $contentType);
 
         return $this->client
@@ -652,7 +652,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListSets|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \OpenAPI\Client\Model\ListEquipmentSet|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
      */
     public function getSetsList($language, $game, $sort_level = null, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $page_size = null, $page_number = null, $fields_set = null, $filter_contains_cosmetics_only = null, $filter_contains_cosmetics = null, string $contentType = self::contentTypes['getSetsList'][0])
     {
@@ -679,7 +679,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListSets|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ListEquipmentSet|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSetsListWithHttpInfo($language, $game, $sort_level = null, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $page_size = null, $page_number = null, $fields_set = null, $filter_contains_cosmetics_only = null, $filter_contains_cosmetics = null, string $contentType = self::contentTypes['getSetsList'][0])
     {
@@ -710,11 +710,11 @@ class SetsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListSets' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\ListEquipmentSet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListSets' !== 'string') {
+                        if ('\OpenAPI\Client\Model\ListEquipmentSet' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -732,7 +732,7 @@ class SetsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListSets', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListEquipmentSet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -805,7 +805,7 @@ class SetsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListSets';
+            $returnType = '\OpenAPI\Client\Model\ListEquipmentSet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -838,7 +838,7 @@ class SetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListSets',
+                        '\OpenAPI\Client\Model\ListEquipmentSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -916,7 +916,7 @@ class SetsApi
      */
     public function getSetsListAsyncWithHttpInfo($language, $game, $sort_level = null, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $page_size = null, $page_number = null, $fields_set = null, $filter_contains_cosmetics_only = null, $filter_contains_cosmetics = null, string $contentType = self::contentTypes['getSetsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ListSets';
+        $returnType = '\OpenAPI\Client\Model\ListEquipmentSet';
         $request = $this->getSetsListRequest($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_contains_cosmetics_only, $filter_contains_cosmetics, $contentType);
 
         return $this->client
@@ -1191,7 +1191,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListSet[]|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \OpenAPI\Client\Model\ListEquipmentSet[]|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
      */
     public function getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $limit = 8, $filter_is_cosmetic = null, string $contentType = self::contentTypes['getSetsSearch'][0])
     {
@@ -1215,7 +1215,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListSet[]|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ListEquipmentSet[]|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSetsSearchWithHttpInfo($language, $game, $query, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $limit = 8, $filter_is_cosmetic = null, string $contentType = self::contentTypes['getSetsSearch'][0])
     {
@@ -1246,11 +1246,11 @@ class SetsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListSet[]' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\ListEquipmentSet[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListSet[]' !== 'string') {
+                        if ('\OpenAPI\Client\Model\ListEquipmentSet[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1268,7 +1268,7 @@ class SetsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListSet[]', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListEquipmentSet[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1341,7 +1341,7 @@ class SetsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListSet[]';
+            $returnType = '\OpenAPI\Client\Model\ListEquipmentSet[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1374,7 +1374,7 @@ class SetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListSet[]',
+                        '\OpenAPI\Client\Model\ListEquipmentSet[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1446,7 +1446,7 @@ class SetsApi
      */
     public function getSetsSearchAsyncWithHttpInfo($language, $game, $query, $filter_min_highest_equipment_level = null, $filter_max_highest_equipment_level = null, $limit = 8, $filter_is_cosmetic = null, string $contentType = self::contentTypes['getSetsSearch'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ListSet[]';
+        $returnType = '\OpenAPI\Client\Model\ListEquipmentSet[]';
         $request = $this->getSetsSearchRequest($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic, $contentType);
 
         return $this->client
@@ -1690,7 +1690,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Set|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \OpenAPI\Client\Model\EquipmentSet|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
      */
     public function getSetsSingle($language, $ankama_id, $game, string $contentType = self::contentTypes['getSetsSingle'][0])
     {
@@ -1710,7 +1710,7 @@ class SetsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Set|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\EquipmentSet|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSetsSingleWithHttpInfo($language, $ankama_id, $game, string $contentType = self::contentTypes['getSetsSingle'][0])
     {
@@ -1741,11 +1741,11 @@ class SetsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Set' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\EquipmentSet' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Set' !== 'string') {
+                        if ('\OpenAPI\Client\Model\EquipmentSet' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1763,7 +1763,7 @@ class SetsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Set', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EquipmentSet', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1836,7 +1836,7 @@ class SetsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Set';
+            $returnType = '\OpenAPI\Client\Model\EquipmentSet';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1869,7 +1869,7 @@ class SetsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Set',
+                        '\OpenAPI\Client\Model\EquipmentSet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1933,7 +1933,7 @@ class SetsApi
      */
     public function getSetsSingleAsyncWithHttpInfo($language, $ankama_id, $game, string $contentType = self::contentTypes['getSetsSingle'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Set';
+        $returnType = '\OpenAPI\Client\Model\EquipmentSet';
         $request = $this->getSetsSingleRequest($language, $ankama_id, $game, $contentType);
 
         return $this->client

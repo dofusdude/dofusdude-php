@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSets
+ * ListEquipmentSets
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ListSets Class Doc Comment
+ * ListEquipmentSets Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ListSets implements ModelInterface, ArrayAccess, \JsonSerializable
+class ListEquipmentSets implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ListSets implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListSets';
+    protected static $openAPIModelName = 'ListEquipmentSets';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class ListSets implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         '_links' => '\OpenAPI\Client\Model\PagedLinks',
-        'sets' => '\OpenAPI\Client\Model\ListSet[]'
+        'sets' => '\OpenAPI\Client\Model\ListEquipmentSet[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class ListSets implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets sets
      *
-     * @return \OpenAPI\Client\Model\ListSet[]|null
+     * @return \OpenAPI\Client\Model\ListEquipmentSet[]|null
      */
     public function getSets()
     {
@@ -337,7 +337,7 @@ class ListSets implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sets
      *
-     * @param \OpenAPI\Client\Model\ListSet[]|null $sets sets
+     * @param \OpenAPI\Client\Model\ListEquipmentSet[]|null $sets sets
      *
      * @return self
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSet
+ * EquipmentSet
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ListSet Class Doc Comment
+ * EquipmentSet Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
+class EquipmentSet implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListSet';
+    protected static $openAPIModelName = 'EquipmentSet';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,10 +60,9 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'ankama_id' => 'int',
         'name' => 'string',
-        'items' => 'int',
-        'level' => 'int',
-        'effects' => 'array<string,\OpenAPI\Client\Model\Effect[]>',
         'equipment_ids' => 'int[]',
+        'effects' => 'array<string,\OpenAPI\Client\Model\Effect[]>',
+        'highest_equipment_level' => 'int',
         'is_cosmetic' => 'bool'
     ];
 
@@ -77,10 +76,9 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'ankama_id' => null,
         'name' => null,
-        'items' => null,
-        'level' => null,
-        'effects' => null,
         'equipment_ids' => null,
+        'effects' => null,
+        'highest_equipment_level' => null,
         'is_cosmetic' => null
     ];
 
@@ -92,10 +90,9 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'ankama_id' => false,
         'name' => false,
-        'items' => false,
-        'level' => false,
+        'equipment_ids' => false,
         'effects' => false,
-        'equipment_ids' => true,
+        'highest_equipment_level' => false,
         'is_cosmetic' => false
     ];
 
@@ -187,10 +184,9 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'ankama_id' => 'ankama_id',
         'name' => 'name',
-        'items' => 'items',
-        'level' => 'level',
-        'effects' => 'effects',
         'equipment_ids' => 'equipment_ids',
+        'effects' => 'effects',
+        'highest_equipment_level' => 'highest_equipment_level',
         'is_cosmetic' => 'is_cosmetic'
     ];
 
@@ -202,10 +198,9 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'ankama_id' => 'setAnkamaId',
         'name' => 'setName',
-        'items' => 'setItems',
-        'level' => 'setLevel',
-        'effects' => 'setEffects',
         'equipment_ids' => 'setEquipmentIds',
+        'effects' => 'setEffects',
+        'highest_equipment_level' => 'setHighestEquipmentLevel',
         'is_cosmetic' => 'setIsCosmetic'
     ];
 
@@ -217,10 +212,9 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'ankama_id' => 'getAnkamaId',
         'name' => 'getName',
-        'items' => 'getItems',
-        'level' => 'getLevel',
-        'effects' => 'getEffects',
         'equipment_ids' => 'getEquipmentIds',
+        'effects' => 'getEffects',
+        'highest_equipment_level' => 'getHighestEquipmentLevel',
         'is_cosmetic' => 'getIsCosmetic'
     ];
 
@@ -283,10 +277,9 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('ankama_id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('items', $data ?? [], null);
-        $this->setIfExists('level', $data ?? [], null);
-        $this->setIfExists('effects', $data ?? [], null);
         $this->setIfExists('equipment_ids', $data ?? [], null);
+        $this->setIfExists('effects', $data ?? [], null);
+        $this->setIfExists('highest_equipment_level', $data ?? [], null);
         $this->setIfExists('is_cosmetic', $data ?? [], null);
     }
 
@@ -387,55 +380,28 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets items
+     * Gets equipment_ids
      *
-     * @return int|null
+     * @return int[]|null
      */
-    public function getItems()
+    public function getEquipmentIds()
     {
-        return $this->container['items'];
+        return $this->container['equipment_ids'];
     }
 
     /**
-     * Sets items
+     * Sets equipment_ids
      *
-     * @param int|null $items amount
+     * @param int[]|null $equipment_ids equipment_ids
      *
      * @return self
      */
-    public function setItems($items)
+    public function setEquipmentIds($equipment_ids)
     {
-        if (is_null($items)) {
-            throw new \InvalidArgumentException('non-nullable items cannot be null');
+        if (is_null($equipment_ids)) {
+            throw new \InvalidArgumentException('non-nullable equipment_ids cannot be null');
         }
-        $this->container['items'] = $items;
-
-        return $this;
-    }
-
-    /**
-     * Gets level
-     *
-     * @return int|null
-     */
-    public function getLevel()
-    {
-        return $this->container['level'];
-    }
-
-    /**
-     * Sets level
-     *
-     * @param int|null $level level
-     *
-     * @return self
-     */
-    public function setLevel($level)
-    {
-        if (is_null($level)) {
-            throw new \InvalidArgumentException('non-nullable level cannot be null');
-        }
-        $this->container['level'] = $level;
+        $this->container['equipment_ids'] = $equipment_ids;
 
         return $this;
     }
@@ -468,35 +434,28 @@ class ListSet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets equipment_ids
+     * Gets highest_equipment_level
      *
-     * @return int[]|null
+     * @return int|null
      */
-    public function getEquipmentIds()
+    public function getHighestEquipmentLevel()
     {
-        return $this->container['equipment_ids'];
+        return $this->container['highest_equipment_level'];
     }
 
     /**
-     * Sets equipment_ids
+     * Sets highest_equipment_level
      *
-     * @param int[]|null $equipment_ids equipment_ids
+     * @param int|null $highest_equipment_level highest_equipment_level
      *
      * @return self
      */
-    public function setEquipmentIds($equipment_ids)
+    public function setHighestEquipmentLevel($highest_equipment_level)
     {
-        if (is_null($equipment_ids)) {
-            array_push($this->openAPINullablesSetToNull, 'equipment_ids');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('equipment_ids', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+        if (is_null($highest_equipment_level)) {
+            throw new \InvalidArgumentException('non-nullable highest_equipment_level cannot be null');
         }
-        $this->container['equipment_ids'] = $equipment_ids;
+        $this->container['highest_equipment_level'] = $highest_equipment_level;
 
         return $this;
     }

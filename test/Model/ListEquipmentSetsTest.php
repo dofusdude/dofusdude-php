@@ -1,6 +1,6 @@
 <?php
 /**
- * SetTest
+ * ListEquipmentSetsTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SetTest Class Doc Comment
+ * ListEquipmentSetsTest Class Doc Comment
  *
  * @category    Class
- * @description Set
+ * @description ListEquipmentSets
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SetTest extends TestCase
+class ListEquipmentSetsTest extends TestCase
 {
 
     /**
@@ -72,63 +72,27 @@ class SetTest extends TestCase
     }
 
     /**
-     * Test "Set"
+     * Test "ListEquipmentSets"
      */
-    public function testSet()
+    public function testListEquipmentSets()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "ankama_id"
+     * Test attribute "_links"
      */
-    public function testPropertyAnkamaId()
+    public function testPropertyLinks()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "sets"
      */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "equipment_ids"
-     */
-    public function testPropertyEquipmentIds()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "effects"
-     */
-    public function testPropertyEffects()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "highest_equipment_level"
-     */
-    public function testPropertyHighestEquipmentLevel()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "is_cosmetic"
-     */
-    public function testPropertyIsCosmetic()
+    public function testPropertySets()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -13,7 +13,7 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 ## `getAllSetsList()`
 
 ```php
-getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListSets
+getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListEquipmentSets
 ```
 
 List All Sets
@@ -65,7 +65,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListSets**](../Model/ListSets.md)
+[**\OpenAPI\Client\Model\ListEquipmentSets**](../Model/ListEquipmentSets.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ No authorization required
 ## `getSetsList()`
 
 ```php
-getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListSets
+getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListEquipmentSet
 ```
 
 List Sets
@@ -139,7 +139,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListSets**](../Model/ListSets.md)
+[**\OpenAPI\Client\Model\ListEquipmentSet**](../Model/ListEquipmentSet.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ No authorization required
 ## `getSetsSearch()`
 
 ```php
-getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic): \OpenAPI\Client\Model\ListSet[]
+getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic): \OpenAPI\Client\Model\ListEquipmentSet[]
 ```
 
 Search Sets
@@ -207,7 +207,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListSet[]**](../Model/ListSet.md)
+[**\OpenAPI\Client\Model\ListEquipmentSet[]**](../Model/ListEquipmentSet.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ No authorization required
 ## `getSetsSingle()`
 
 ```php
-getSetsSingle($language, $ankama_id, $game): \OpenAPI\Client\Model\Set
+getSetsSingle($language, $ankama_id, $game): \OpenAPI\Client\Model\EquipmentSet
 ```
 
 Single Sets
@@ -267,7 +267,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Set**](../Model/Set.md)
+[**\OpenAPI\Client\Model\EquipmentSet**](../Model/EquipmentSet.md)
 
 ### Authorization
 

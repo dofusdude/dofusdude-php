@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSetTest
+ * EquipmentSetTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListSetTest Class Doc Comment
+ * EquipmentSetTest Class Doc Comment
  *
  * @category    Class
- * @description ListSet
+ * @description EquipmentSet
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListSetTest extends TestCase
+class EquipmentSetTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class ListSetTest extends TestCase
     }
 
     /**
-     * Test "ListSet"
+     * Test "EquipmentSet"
      */
-    public function testListSet()
+    public function testEquipmentSet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -99,18 +99,9 @@ class ListSetTest extends TestCase
     }
 
     /**
-     * Test attribute "items"
+     * Test attribute "equipment_ids"
      */
-    public function testPropertyItems()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "level"
-     */
-    public function testPropertyLevel()
+    public function testPropertyEquipmentIds()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -126,9 +117,9 @@ class ListSetTest extends TestCase
     }
 
     /**
-     * Test attribute "equipment_ids"
+     * Test attribute "highest_equipment_level"
      */
-    public function testPropertyEquipmentIds()
+    public function testPropertyHighestEquipmentLevel()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

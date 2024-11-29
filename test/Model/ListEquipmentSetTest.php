@@ -1,6 +1,6 @@
 <?php
 /**
- * ListSetsTest
+ * ListEquipmentSetTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListSetsTest Class Doc Comment
+ * ListEquipmentSetTest Class Doc Comment
  *
  * @category    Class
- * @description ListSets
+ * @description ListEquipmentSet
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListSetsTest extends TestCase
+class ListEquipmentSetTest extends TestCase
 {
 
     /**
@@ -72,27 +72,72 @@ class ListSetsTest extends TestCase
     }
 
     /**
-     * Test "ListSets"
+     * Test "ListEquipmentSet"
      */
-    public function testListSets()
+    public function testListEquipmentSet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "_links"
+     * Test attribute "ankama_id"
      */
-    public function testPropertyLinks()
+    public function testPropertyAnkamaId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sets"
+     * Test attribute "name"
      */
-    public function testPropertySets()
+    public function testPropertyName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "items"
+     */
+    public function testPropertyItems()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "level"
+     */
+    public function testPropertyLevel()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "effects"
+     */
+    public function testPropertyEffects()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "equipment_ids"
+     */
+    public function testPropertyEquipmentIds()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "is_cosmetic"
+     */
+    public function testPropertyIsCosmetic()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
