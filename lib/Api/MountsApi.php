@@ -138,7 +138,7 @@ class MountsApi
      * List All Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  string $accept_encoding optional compression for saving bandwidth (optional)
      * @param  int $filter_family_id only results with the unique family id (optional)
@@ -160,7 +160,7 @@ class MountsApi
      * List All Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  string $accept_encoding optional compression for saving bandwidth (optional)
      * @param  int $filter_family_id only results with the unique family id (optional)
@@ -359,7 +359,7 @@ class MountsApi
      * List All Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  string $accept_encoding optional compression for saving bandwidth (optional)
      * @param  int $filter_family_id only results with the unique family id (optional)
@@ -384,7 +384,7 @@ class MountsApi
      * List All Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  string $accept_encoding optional compression for saving bandwidth (optional)
      * @param  int $filter_family_id only results with the unique family id (optional)
@@ -438,7 +438,7 @@ class MountsApi
      * Create request for operation 'getAllMountsList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  string $accept_encoding optional compression for saving bandwidth (optional)
      * @param  int $filter_family_id only results with the unique family id (optional)
@@ -582,7 +582,7 @@ class MountsApi
      * List Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $page_size size of the results from the list. -1 disables pagination and gets all in one response. (optional)
      * @param  int $page_number page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
@@ -606,7 +606,7 @@ class MountsApi
      * List Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $page_size size of the results from the list. -1 disables pagination and gets all in one response. (optional)
      * @param  int $page_number page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
@@ -807,7 +807,7 @@ class MountsApi
      * List Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $page_size size of the results from the list. -1 disables pagination and gets all in one response. (optional)
      * @param  int $page_number page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
@@ -834,7 +834,7 @@ class MountsApi
      * List Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $page_size size of the results from the list. -1 disables pagination and gets all in one response. (optional)
      * @param  int $page_number page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
@@ -890,7 +890,7 @@ class MountsApi
      * Create request for operation 'getMountsList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $page_size size of the results from the list. -1 disables pagination and gets all in one response. (optional)
      * @param  int $page_number page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
@@ -1067,7 +1067,7 @@ class MountsApi
      * Search Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -1089,7 +1089,7 @@ class MountsApi
      * Search Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -1288,7 +1288,7 @@ class MountsApi
      * Search Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -1313,7 +1313,7 @@ class MountsApi
      * Search Mounts
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -1367,7 +1367,7 @@ class MountsApi
      * Create request for operation 'getMountsSearch'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_family_name only results with the translated family name (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -1529,7 +1529,7 @@ class MountsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountsSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1549,7 +1549,7 @@ class MountsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountsSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1746,7 +1746,7 @@ class MountsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1769,7 +1769,7 @@ class MountsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1821,7 +1821,7 @@ class MountsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMountsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

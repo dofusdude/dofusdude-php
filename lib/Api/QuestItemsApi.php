@@ -138,7 +138,7 @@ class QuestItemsApi
      * List All Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -162,7 +162,7 @@ class QuestItemsApi
      * List All Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -363,7 +363,7 @@ class QuestItemsApi
      * List All Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -390,7 +390,7 @@ class QuestItemsApi
      * List All Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -446,7 +446,7 @@ class QuestItemsApi
      * Create request for operation 'getAllItemsQuestList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -625,7 +625,7 @@ class QuestItemsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemQuestSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -645,7 +645,7 @@ class QuestItemsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemQuestSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -842,7 +842,7 @@ class QuestItemsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemQuestSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -865,7 +865,7 @@ class QuestItemsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemQuestSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -917,7 +917,7 @@ class QuestItemsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemQuestSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1048,7 +1048,7 @@ class QuestItemsApi
      * List Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1074,7 +1074,7 @@ class QuestItemsApi
      * List Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1277,7 +1277,7 @@ class QuestItemsApi
      * List Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1306,7 +1306,7 @@ class QuestItemsApi
      * List Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1364,7 +1364,7 @@ class QuestItemsApi
      * Create request for operation 'getItemsQuestList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1575,7 +1575,7 @@ class QuestItemsApi
      * Search Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_type_name only results with the translated type name (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
@@ -1600,7 +1600,7 @@ class QuestItemsApi
      * Search Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_type_name only results with the translated type name (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
@@ -1802,7 +1802,7 @@ class QuestItemsApi
      * Search Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_type_name only results with the translated type name (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
@@ -1830,7 +1830,7 @@ class QuestItemsApi
      * Search Quest Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_type_name only results with the translated type name (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
@@ -1887,7 +1887,7 @@ class QuestItemsApi
      * Create request for operation 'getItemsQuestSearch'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  string $filter_type_name only results with the translated type name (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)

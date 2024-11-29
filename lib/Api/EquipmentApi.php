@@ -138,7 +138,7 @@ class EquipmentApi
      * List All Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -162,7 +162,7 @@ class EquipmentApi
      * List All Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -363,7 +363,7 @@ class EquipmentApi
      * List All Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -390,7 +390,7 @@ class EquipmentApi
      * List All Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -446,7 +446,7 @@ class EquipmentApi
      * Create request for operation 'getAllItemsEquipmentList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -615,7 +615,7 @@ class EquipmentApi
      * List Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -641,7 +641,7 @@ class EquipmentApi
      * List Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -844,7 +844,7 @@ class EquipmentApi
      * List Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -873,7 +873,7 @@ class EquipmentApi
      * List Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -931,7 +931,7 @@ class EquipmentApi
      * Create request for operation 'getItemsEquipmentList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1133,7 +1133,7 @@ class EquipmentApi
      * Search Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1157,7 +1157,7 @@ class EquipmentApi
      * Search Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1358,7 +1358,7 @@ class EquipmentApi
      * Search Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1385,7 +1385,7 @@ class EquipmentApi
      * Search Equipment
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1441,7 +1441,7 @@ class EquipmentApi
      * Create request for operation 'getItemsEquipmentSearch'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -1637,7 +1637,7 @@ class EquipmentApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemsEquipmentSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1657,7 +1657,7 @@ class EquipmentApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemsEquipmentSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1854,7 +1854,7 @@ class EquipmentApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemsEquipmentSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1877,7 +1877,7 @@ class EquipmentApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemsEquipmentSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1929,7 +1929,7 @@ class EquipmentApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getItemsEquipmentSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

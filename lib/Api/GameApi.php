@@ -132,7 +132,7 @@ class GameApi
      * Game Search
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query search query (required)
      * @param  string[] $filter_search_index only results with all specific type (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -156,7 +156,7 @@ class GameApi
      * Game Search
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query search query (required)
      * @param  string[] $filter_search_index only results with all specific type (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -357,7 +357,7 @@ class GameApi
      * Game Search
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query search query (required)
      * @param  string[] $filter_search_index only results with all specific type (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -384,7 +384,7 @@ class GameApi
      * Game Search
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query search query (required)
      * @param  string[] $filter_search_index only results with all specific type (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -440,7 +440,7 @@ class GameApi
      * Create request for operation 'getGameSearch'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query search query (required)
      * @param  string[] $filter_search_index only results with all specific type (optional)
      * @param  int $limit maximum number of returned results (optional, default to 8)
@@ -623,7 +623,7 @@ class GameApi
      * Search All Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -647,7 +647,7 @@ class GameApi
      * Search All Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -848,7 +848,7 @@ class GameApi
      * Search All Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -875,7 +875,7 @@ class GameApi
      * Search All Items
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)
@@ -931,7 +931,7 @@ class GameApi
      * Create request for operation 'getItemsAllSearch'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_level only results which level is equal or above this value (optional)
      * @param  int $filter_max_level only results which level is equal or below this value (optional)

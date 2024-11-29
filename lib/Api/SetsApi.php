@@ -138,7 +138,7 @@ class SetsApi
      * List All Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -163,7 +163,7 @@ class SetsApi
      * List All Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -365,7 +365,7 @@ class SetsApi
      * List All Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -393,7 +393,7 @@ class SetsApi
      * List All Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -450,7 +450,7 @@ class SetsApi
      * Create request for operation 'getAllSetsList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -639,7 +639,7 @@ class SetsApi
      * List Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -666,7 +666,7 @@ class SetsApi
      * List Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -870,7 +870,7 @@ class SetsApi
      * List Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -900,7 +900,7 @@ class SetsApi
      * List Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -959,7 +959,7 @@ class SetsApi
      * Create request for operation 'getSetsList'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $sort_level sort the resulting list by level, default unsorted (optional)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -1181,7 +1181,7 @@ class SetsApi
      * Search Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -1205,7 +1205,7 @@ class SetsApi
      * Search Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -1406,7 +1406,7 @@ class SetsApi
      * Search Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -1433,7 +1433,7 @@ class SetsApi
      * Search Sets
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -1489,7 +1489,7 @@ class SetsApi
      * Create request for operation 'getSetsSearch'
      *
      * @param  string $language a valid language code (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $query case sensitive search query (required)
      * @param  int $filter_min_highest_equipment_level only results where the equipment with the highest level is above or equal to this value (optional)
      * @param  int $filter_max_highest_equipment_level only results where the equipment with the highest level is below or equal to this value (optional)
@@ -1685,7 +1685,7 @@ class SetsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSetsSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1705,7 +1705,7 @@ class SetsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSetsSingle'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1902,7 +1902,7 @@ class SetsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSetsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1925,7 +1925,7 @@ class SetsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSetsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1977,7 +1977,7 @@ class SetsApi
      *
      * @param  string $language a valid language code (required)
      * @param  int $ankama_id identifier (required)
-     * @param  string $game dofus3 | dofus3beta (required)
+     * @param  string $game game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSetsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -32,7 +32,7 @@ $apiInstance = new OpenAPI\Client\Api\GameApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | dofus3 | dofus3beta
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = paztek; // string | search query
 $filter_search_index = ["items-equipment"]; // string[] | only results with all specific type
 $limit = 8; // int | maximum number of returned results
@@ -52,7 +52,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**| dofus3 | dofus3beta | |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 | **query** | **string**| search query | |
 | **filter_search_index** | [**string[]**](../Model/string.md)| only results with all specific type | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
@@ -100,7 +100,7 @@ $apiInstance = new OpenAPI\Client\Api\GameApi(
     new GuzzleHttp\Client()
 );
 $language = fr; // string | a valid language code
-$game = dofus3; // string | dofus3 | dofus3beta
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = atcham; // string | case sensitive search query
 $filter_min_level = 190; // int | only results which level is equal or above this value
 $filter_max_level = 200; // int | only results which level is equal or below this value
@@ -120,7 +120,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**| dofus3 | dofus3beta | |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 | **query** | **string**| case sensitive search query | |
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |

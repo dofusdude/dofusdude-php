@@ -34,7 +34,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | dofus3 | dofus3beta
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_highest_equipment_level = 190; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
@@ -55,7 +55,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**| dofus3 | dofus3beta | |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 | **sort_level** | **string**| sort the resulting list by level, default unsorted | [optional] |
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
@@ -104,7 +104,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | dofus3 | dofus3beta
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_highest_equipment_level = 190; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
@@ -127,7 +127,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**| dofus3 | dofus3beta | |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 | **sort_level** | **string**| sort the resulting list by level, default unsorted | [optional] |
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
@@ -178,7 +178,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | dofus3 | dofus3beta
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = Des; // string | case sensitive search query
 $filter_min_highest_equipment_level = 195; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
@@ -198,7 +198,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**| dofus3 | dofus3beta | |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 | **query** | **string**| case sensitive search query | |
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
@@ -247,7 +247,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
 );
 $language = 'language_example'; // string | a valid language code
 $ankama_id = 499; // int | identifier
-$game = dofus3; // string | dofus3 | dofus3beta
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getSetsSingle($language, $ankama_id, $game);
@@ -263,7 +263,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
 | **ankama_id** | **int**| identifier | |
-| **game** | **string**| dofus3 | dofus3beta | |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 
 ### Return type
 
