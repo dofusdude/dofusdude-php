@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bonus_whitelist** | **string[]** | from all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses | [optional]
-**bonus_blacklist** | **string[]** | from all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses | [optional]
+**bonus_whitelist** | **string[]** | from all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses | [optional]
+**bonus_blacklist** | **string[]** | from all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses | [optional]
 **subscriptions** | **string[]** | Get the available subscriptions with /meta/webhooks/almanax |
 **format** | **string** |  |
 **callback** | **string** | Discord Webhook URL |

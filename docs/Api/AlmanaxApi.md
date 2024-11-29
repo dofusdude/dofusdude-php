@@ -4,14 +4,14 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getAlmanaxDate()**](AlmanaxApi.md#getAlmanaxDate) | **GET** /dofus2/{language}/almanax/{date} | Single Almanax Date |
-| [**getAlmanaxRange()**](AlmanaxApi.md#getAlmanaxRange) | **GET** /dofus2/{language}/almanax | Almanax Range |
+| [**getAlmanaxDate()**](AlmanaxApi.md#getAlmanaxDate) | **GET** /dofus3/{language}/almanax/{date} | Single Almanax Date |
+| [**getAlmanaxRange()**](AlmanaxApi.md#getAlmanaxRange) | **GET** /dofus3/{language}/almanax | Almanax Range |
 
 
 ## `getAlmanaxDate()`
 
 ```php
-getAlmanaxDate($language, $date): \OpenAPI\Client\Model\AlmanaxEntry
+getAlmanaxDate($language, $date): \OpenAPI\Client\Model\Almanax
 ```
 
 Single Almanax Date
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AlmanaxEntry**](../Model/AlmanaxEntry.md)
+[**\OpenAPI\Client\Model\Almanax**](../Model/Almanax.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `getAlmanaxRange()`
 
 ```php
-getAlmanaxRange($language, $filter_bonus_type, $range_from, $range_to, $range_size, $timezone): \OpenAPI\Client\Model\AlmanaxEntry[]
+getAlmanaxRange($language, $filter_bonus_type, $range_from, $range_to, $range_size, $timezone): \OpenAPI\Client\Model\Almanax[]
 ```
 
 Almanax Range
@@ -117,7 +117,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AlmanaxEntry[]**](../Model/AlmanaxEntry.md)
+[**\OpenAPI\Client\Model\Almanax[]**](../Model/Almanax.md)
 
 ### Authorization
 

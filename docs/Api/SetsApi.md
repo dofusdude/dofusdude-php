@@ -4,16 +4,16 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getAllSetsList()**](SetsApi.md#getAllSetsList) | **GET** /{game}/{language}/sets/all | List All Sets |
-| [**getSetsList()**](SetsApi.md#getSetsList) | **GET** /{game}/{language}/sets | List Sets |
-| [**getSetsSearch()**](SetsApi.md#getSetsSearch) | **GET** /{game}/{language}/sets/search | Search Sets |
-| [**getSetsSingle()**](SetsApi.md#getSetsSingle) | **GET** /{game}/{language}/sets/{ankama_id} | Single Sets |
+| [**getAllSetsList()**](SetsApi.md#getAllSetsList) | **GET** /{game}/v1/{language}/sets/all | List All Sets |
+| [**getSetsList()**](SetsApi.md#getSetsList) | **GET** /{game}/v1/{language}/sets | List Sets |
+| [**getSetsSearch()**](SetsApi.md#getSetsSearch) | **GET** /{game}/v1/{language}/sets/search | Search Sets |
+| [**getSetsSingle()**](SetsApi.md#getSetsSingle) | **GET** /{game}/v1/{language}/sets/{ankama_id} | Single Sets |
 
 
 ## `getAllSetsList()`
 
 ```php
-getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_is_cosmetic): \OpenAPI\Client\Model\SetsListPaged
+getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListSets
 ```
 
 List All Sets
@@ -34,15 +34,16 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus2; // string
+$game = dofus3; // string | dofus3 | dofus3beta
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_highest_equipment_level = 190; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
 $accept_encoding = 'accept_encoding_example'; // string | optional compression for saving bandwidth
-$filter_is_cosmetic = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+$filter_contains_cosmetics_only = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+$filter_contains_cosmetics = True; // bool | filter sets based on if they got cosmetic items in it.
 
 try {
-    $result = $apiInstance->getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_is_cosmetic);
+    $result = $apiInstance->getAllSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $accept_encoding, $filter_contains_cosmetics_only, $filter_contains_cosmetics);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SetsApi->getAllSetsList: ', $e->getMessage(), PHP_EOL;
@@ -54,16 +55,17 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**|  | |
+| **game** | **string**| dofus3 | dofus3beta | |
 | **sort_level** | **string**| sort the resulting list by level, default unsorted | [optional] |
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
 | **accept_encoding** | **string**| optional compression for saving bandwidth | [optional] |
-| **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
+| **filter_contains_cosmetics_only** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
+| **filter_contains_cosmetics** | **bool**| filter sets based on if they got cosmetic items in it. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SetsListPaged**](../Model/SetsListPaged.md)
+[**\OpenAPI\Client\Model\ListSets**](../Model/ListSets.md)
 
 ### Authorization
 
@@ -81,7 +83,7 @@ No authorization required
 ## `getSetsList()`
 
 ```php
-getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_is_cosmetic): \OpenAPI\Client\Model\SetsListPaged
+getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListSets
 ```
 
 List Sets
@@ -102,17 +104,18 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus2; // string
+$game = dofus3; // string | dofus3 | dofus3beta
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_highest_equipment_level = 190; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
 $page_size = 20; // int | size of the results from the list. -1 disables pagination and gets all in one response.
 $page_number = 1; // int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
 $fields_set = ["equipment_ids"]; // string[] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
-$filter_is_cosmetic = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+$filter_contains_cosmetics_only = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+$filter_contains_cosmetics = True; // bool | filter sets based on if they got cosmetic items in it.
 
 try {
-    $result = $apiInstance->getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_is_cosmetic);
+    $result = $apiInstance->getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_contains_cosmetics_only, $filter_contains_cosmetics);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SetsApi->getSetsList: ', $e->getMessage(), PHP_EOL;
@@ -124,18 +127,19 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**|  | |
+| **game** | **string**| dofus3 | dofus3beta | |
 | **sort_level** | **string**| sort the resulting list by level, default unsorted | [optional] |
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
 | **page_size** | **int**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] |
 | **page_number** | **int**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] |
 | **fields_set** | [**string[]**](../Model/string.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] |
-| **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
+| **filter_contains_cosmetics_only** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
+| **filter_contains_cosmetics** | **bool**| filter sets based on if they got cosmetic items in it. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SetsListPaged**](../Model/SetsListPaged.md)
+[**\OpenAPI\Client\Model\ListSets**](../Model/ListSets.md)
 
 ### Authorization
 
@@ -153,7 +157,7 @@ No authorization required
 ## `getSetsSearch()`
 
 ```php
-getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic): \OpenAPI\Client\Model\SetListEntry[]
+getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic): \OpenAPI\Client\Model\ListSet[]
 ```
 
 Search Sets
@@ -174,7 +178,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus2; // string
+$game = dofus3; // string | dofus3 | dofus3beta
 $query = Des; // string | case sensitive search query
 $filter_min_highest_equipment_level = 195; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
@@ -194,7 +198,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**|  | |
+| **game** | **string**| dofus3 | dofus3beta | |
 | **query** | **string**| case sensitive search query | |
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
@@ -203,7 +207,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SetListEntry[]**](../Model/SetListEntry.md)
+[**\OpenAPI\Client\Model\ListSet[]**](../Model/ListSet.md)
 
 ### Authorization
 
@@ -221,7 +225,7 @@ No authorization required
 ## `getSetsSingle()`
 
 ```php
-getSetsSingle($language, $ankama_id, $game): \OpenAPI\Client\Model\EquipmentSet
+getSetsSingle($language, $ankama_id, $game): \OpenAPI\Client\Model\Set
 ```
 
 Single Sets
@@ -243,7 +247,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
 );
 $language = 'language_example'; // string | a valid language code
 $ankama_id = 499; // int | identifier
-$game = dofus2; // string
+$game = dofus3; // string | dofus3 | dofus3beta
 
 try {
     $result = $apiInstance->getSetsSingle($language, $ankama_id, $game);
@@ -259,11 +263,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
 | **ankama_id** | **int**| identifier | |
-| **game** | **string**|  | |
+| **game** | **string**| dofus3 | dofus3beta | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EquipmentSet**](../Model/EquipmentSet.md)
+[**\OpenAPI\Client\Model\Set**](../Model/Set.md)
 
 ### Authorization
 

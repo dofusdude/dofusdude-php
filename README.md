@@ -1,14 +1,18 @@
 # dofusdude-php
 
-# A project for you - the developer.
+# Open Ankama Developer Community
 The all-in-one toolbelt for your next Ankama related project.
+
+## Versions
+- [Dofus 2](https://docs.dofusdu.de/dofus2/)
+- [Dofus 3](https://docs.dofusdu.de/dofus3/)
+  - v1 [latest] (you are here) 
 
 ## Client SDKs
 - [Javascript](https://github.com/dofusdude/dofusdude-js) `npm i dofusdude-js --save`
 - [Typescript](https://github.com/dofusdude/dofusdude-ts) `npm i dofusdude-ts --save`
 - [Go](https://github.com/dofusdude/dodugo) `go get -u github.com/dofusdude/dodugo`
 - [Python](https://github.com/dofusdude/dofusdude-py) `pip install dofusdude`
-- [PHP](https://github.com/dofusdude/dofusdude-php)
 - [Java](https://github.com/dofusdude/dofusdude-java) Maven with GitHub packages setup
 
 Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.
@@ -20,17 +24,15 @@ Your favorite language is missing? Please let me know!
 
 - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.
 
-- 📨 **Discord Integration** Ankama related RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.
+- 📨 **Almanax Discord Integration** Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.
 
-- 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.
+- 🩸 **Dofus 3 Beta** from stable to bleeding edge by replacing /dofus3 with /dofus3beta.
 
-- 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.
+- 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_, _de_.
 
 - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing.
 
-- 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.
-
-- 🖼️ **HD Images** rendering game assets to high-res images with up to 800x800 px.
+- 🕵️ **Official Sources** generated from actual data from the game.
 
 ... and much more on the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h).
 
@@ -107,44 +109,44 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AlmanaxApi* | [**getAlmanaxDate**](docs/Api/AlmanaxApi.md#getalmanaxdate) | **GET** /dofus2/{language}/almanax/{date} | Single Almanax Date
-*AlmanaxApi* | [**getAlmanaxRange**](docs/Api/AlmanaxApi.md#getalmanaxrange) | **GET** /dofus2/{language}/almanax | Almanax Range
-*ConsumablesApi* | [**getAllItemsConsumablesList**](docs/Api/ConsumablesApi.md#getallitemsconsumableslist) | **GET** /{game}/{language}/items/consumables/all | List All Consumables
-*ConsumablesApi* | [**getItemsConsumablesList**](docs/Api/ConsumablesApi.md#getitemsconsumableslist) | **GET** /{game}/{language}/items/consumables | List Consumables
-*ConsumablesApi* | [**getItemsConsumablesSearch**](docs/Api/ConsumablesApi.md#getitemsconsumablessearch) | **GET** /{game}/{language}/items/consumables/search | Search Consumables
-*ConsumablesApi* | [**getItemsConsumablesSingle**](docs/Api/ConsumablesApi.md#getitemsconsumablessingle) | **GET** /{game}/{language}/items/consumables/{ankama_id} | Single Consumables
-*CosmeticsApi* | [**getAllCosmeticsList**](docs/Api/CosmeticsApi.md#getallcosmeticslist) | **GET** /{game}/{language}/items/cosmetics/all | List All Cosmetics
-*CosmeticsApi* | [**getCosmeticsList**](docs/Api/CosmeticsApi.md#getcosmeticslist) | **GET** /{game}/{language}/items/cosmetics | List Cosmetics
-*CosmeticsApi* | [**getCosmeticsSearch**](docs/Api/CosmeticsApi.md#getcosmeticssearch) | **GET** /{game}/{language}/items/cosmetics/search | Search Cosmetics
-*CosmeticsApi* | [**getCosmeticsSingle**](docs/Api/CosmeticsApi.md#getcosmeticssingle) | **GET** /{game}/{language}/items/cosmetics/{ankama_id} | Single Cosmetics
-*EquipmentApi* | [**getAllItemsEquipmentList**](docs/Api/EquipmentApi.md#getallitemsequipmentlist) | **GET** /{game}/{language}/items/equipment/all | List All Equipment
-*EquipmentApi* | [**getItemsEquipmentList**](docs/Api/EquipmentApi.md#getitemsequipmentlist) | **GET** /{game}/{language}/items/equipment | List Equipment
-*EquipmentApi* | [**getItemsEquipmentSearch**](docs/Api/EquipmentApi.md#getitemsequipmentsearch) | **GET** /{game}/{language}/items/equipment/search | Search Equipment
-*EquipmentApi* | [**getItemsEquipmentSingle**](docs/Api/EquipmentApi.md#getitemsequipmentsingle) | **GET** /{game}/{language}/items/equipment/{ankama_id} | Single Equipment
-*GameApi* | [**getGameSearch**](docs/Api/GameApi.md#getgamesearch) | **GET** /{game}/{language}/search | Game Search
-*GameApi* | [**getItemsAllSearch**](docs/Api/GameApi.md#getitemsallsearch) | **GET** /{game}/{language}/items/search | Search All Items
-*MetaApi* | [**getGameSearchTypes**](docs/Api/MetaApi.md#getgamesearchtypes) | **GET** /dofus2/meta/search/types | Available Game Search Types
-*MetaApi* | [**getItemTypes**](docs/Api/MetaApi.md#getitemtypes) | **GET** /dofus2/meta/items/types | Available Item Types
-*MetaApi* | [**getMetaAlmanaxBonuses**](docs/Api/MetaApi.md#getmetaalmanaxbonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
-*MetaApi* | [**getMetaAlmanaxBonusesSearch**](docs/Api/MetaApi.md#getmetaalmanaxbonusessearch) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
-*MetaApi* | [**getMetaElements**](docs/Api/MetaApi.md#getmetaelements) | **GET** /dofus2/meta/elements | Effects and Condition Elements
-*MetaApi* | [**getMetaVersion**](docs/Api/MetaApi.md#getmetaversion) | **GET** /dofus2/meta/version | Game Version
-*MountsApi* | [**getAllMountsList**](docs/Api/MountsApi.md#getallmountslist) | **GET** /{game}/{language}/mounts/all | List All Mounts
-*MountsApi* | [**getMountsList**](docs/Api/MountsApi.md#getmountslist) | **GET** /{game}/{language}/mounts | List Mounts
-*MountsApi* | [**getMountsSearch**](docs/Api/MountsApi.md#getmountssearch) | **GET** /{game}/{language}/mounts/search | Search Mounts
-*MountsApi* | [**getMountsSingle**](docs/Api/MountsApi.md#getmountssingle) | **GET** /{game}/{language}/mounts/{ankama_id} | Single Mounts
-*QuestItemsApi* | [**getAllItemsQuestList**](docs/Api/QuestItemsApi.md#getallitemsquestlist) | **GET** /{game}/{language}/items/quest/all | List All Quest Items
-*QuestItemsApi* | [**getItemQuestSingle**](docs/Api/QuestItemsApi.md#getitemquestsingle) | **GET** /{game}/{language}/items/quest/{ankama_id} | Single Quest Items
-*QuestItemsApi* | [**getItemsQuestList**](docs/Api/QuestItemsApi.md#getitemsquestlist) | **GET** /{game}/{language}/items/quest | List Quest Items
-*QuestItemsApi* | [**getItemsQuestSearch**](docs/Api/QuestItemsApi.md#getitemsquestsearch) | **GET** /{game}/{language}/items/quest/search | Search Quest Items
-*ResourcesApi* | [**getAllItemsResourcesList**](docs/Api/ResourcesApi.md#getallitemsresourceslist) | **GET** /{game}/{language}/items/resources/all | List All Resources
-*ResourcesApi* | [**getItemsResourceSearch**](docs/Api/ResourcesApi.md#getitemsresourcesearch) | **GET** /{game}/{language}/items/resources/search | Search Resources
-*ResourcesApi* | [**getItemsResourcesList**](docs/Api/ResourcesApi.md#getitemsresourceslist) | **GET** /{game}/{language}/items/resources | List Resources
-*ResourcesApi* | [**getItemsResourcesSingle**](docs/Api/ResourcesApi.md#getitemsresourcessingle) | **GET** /{game}/{language}/items/resources/{ankama_id} | Single Resources
-*SetsApi* | [**getAllSetsList**](docs/Api/SetsApi.md#getallsetslist) | **GET** /{game}/{language}/sets/all | List All Sets
-*SetsApi* | [**getSetsList**](docs/Api/SetsApi.md#getsetslist) | **GET** /{game}/{language}/sets | List Sets
-*SetsApi* | [**getSetsSearch**](docs/Api/SetsApi.md#getsetssearch) | **GET** /{game}/{language}/sets/search | Search Sets
-*SetsApi* | [**getSetsSingle**](docs/Api/SetsApi.md#getsetssingle) | **GET** /{game}/{language}/sets/{ankama_id} | Single Sets
+*AlmanaxApi* | [**getAlmanaxDate**](docs/Api/AlmanaxApi.md#getalmanaxdate) | **GET** /dofus3/{language}/almanax/{date} | Single Almanax Date
+*AlmanaxApi* | [**getAlmanaxRange**](docs/Api/AlmanaxApi.md#getalmanaxrange) | **GET** /dofus3/{language}/almanax | Almanax Range
+*ConsumablesApi* | [**getAllItemsConsumablesList**](docs/Api/ConsumablesApi.md#getallitemsconsumableslist) | **GET** /{game}/v1/{language}/items/consumables/all | List All Consumables
+*ConsumablesApi* | [**getItemsConsumablesList**](docs/Api/ConsumablesApi.md#getitemsconsumableslist) | **GET** /{game}/v1/{language}/items/consumables | List Consumables
+*ConsumablesApi* | [**getItemsConsumablesSearch**](docs/Api/ConsumablesApi.md#getitemsconsumablessearch) | **GET** /{game}/v1/{language}/items/consumables/search | Search Consumables
+*ConsumablesApi* | [**getItemsConsumablesSingle**](docs/Api/ConsumablesApi.md#getitemsconsumablessingle) | **GET** /{game}/v1/{language}/items/consumables/{ankama_id} | Single Consumables
+*CosmeticsApi* | [**getAllCosmeticsList**](docs/Api/CosmeticsApi.md#getallcosmeticslist) | **GET** /{game}/v1/{language}/items/cosmetics/all | List All Cosmetics
+*CosmeticsApi* | [**getCosmeticsList**](docs/Api/CosmeticsApi.md#getcosmeticslist) | **GET** /{game}/v1/{language}/items/cosmetics | List Cosmetics
+*CosmeticsApi* | [**getCosmeticsSearch**](docs/Api/CosmeticsApi.md#getcosmeticssearch) | **GET** /{game}/v1/{language}/items/cosmetics/search | Search Cosmetics
+*CosmeticsApi* | [**getCosmeticsSingle**](docs/Api/CosmeticsApi.md#getcosmeticssingle) | **GET** /{game}/v1/{language}/items/cosmetics/{ankama_id} | Single Cosmetics
+*EquipmentApi* | [**getAllItemsEquipmentList**](docs/Api/EquipmentApi.md#getallitemsequipmentlist) | **GET** /{game}/v1/{language}/items/equipment/all | List All Equipment
+*EquipmentApi* | [**getItemsEquipmentList**](docs/Api/EquipmentApi.md#getitemsequipmentlist) | **GET** /{game}/v1/{language}/items/equipment | List Equipment
+*EquipmentApi* | [**getItemsEquipmentSearch**](docs/Api/EquipmentApi.md#getitemsequipmentsearch) | **GET** /{game}/v1/{language}/items/equipment/search | Search Equipment
+*EquipmentApi* | [**getItemsEquipmentSingle**](docs/Api/EquipmentApi.md#getitemsequipmentsingle) | **GET** /{game}/v1/{language}/items/equipment/{ankama_id} | Single Equipment
+*GameApi* | [**getGameSearch**](docs/Api/GameApi.md#getgamesearch) | **GET** /{game}/v1/{language}/search | Game Search
+*GameApi* | [**getItemsAllSearch**](docs/Api/GameApi.md#getitemsallsearch) | **GET** /{game}/v1/{language}/items/search | Search All Items
+*MetaApi* | [**getGameSearchTypes**](docs/Api/MetaApi.md#getgamesearchtypes) | **GET** /dofus3/meta/search/types | Available Game Search Types
+*MetaApi* | [**getItemTypes**](docs/Api/MetaApi.md#getitemtypes) | **GET** /dofus3/meta/items/types | Available Item Types
+*MetaApi* | [**getMetaAlmanaxBonuses**](docs/Api/MetaApi.md#getmetaalmanaxbonuses) | **GET** /dofus3/meta/{language}/almanax/bonuses | Available Almanax Bonuses
+*MetaApi* | [**getMetaAlmanaxBonusesSearch**](docs/Api/MetaApi.md#getmetaalmanaxbonusessearch) | **GET** /dofus3/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
+*MetaApi* | [**getMetaElements**](docs/Api/MetaApi.md#getmetaelements) | **GET** /dofus3/meta/elements | Effects and Condition Elements
+*MetaApi* | [**getMetaVersion**](docs/Api/MetaApi.md#getmetaversion) | **GET** /dofus3/meta/version | Game Version
+*MountsApi* | [**getAllMountsList**](docs/Api/MountsApi.md#getallmountslist) | **GET** /{game}/v1/{language}/mounts/all | List All Mounts
+*MountsApi* | [**getMountsList**](docs/Api/MountsApi.md#getmountslist) | **GET** /{game}/v1/{language}/mounts | List Mounts
+*MountsApi* | [**getMountsSearch**](docs/Api/MountsApi.md#getmountssearch) | **GET** /{game}/v1/{language}/mounts/search | Search Mounts
+*MountsApi* | [**getMountsSingle**](docs/Api/MountsApi.md#getmountssingle) | **GET** /{game}/v1/{language}/mounts/{ankama_id} | Single Mounts
+*QuestItemsApi* | [**getAllItemsQuestList**](docs/Api/QuestItemsApi.md#getallitemsquestlist) | **GET** /{game}/v1/{language}/items/quest/all | List All Quest Items
+*QuestItemsApi* | [**getItemQuestSingle**](docs/Api/QuestItemsApi.md#getitemquestsingle) | **GET** /{game}/v1/{language}/items/quest/{ankama_id} | Single Quest Items
+*QuestItemsApi* | [**getItemsQuestList**](docs/Api/QuestItemsApi.md#getitemsquestlist) | **GET** /{game}/v1/{language}/items/quest | List Quest Items
+*QuestItemsApi* | [**getItemsQuestSearch**](docs/Api/QuestItemsApi.md#getitemsquestsearch) | **GET** /{game}/v1/{language}/items/quest/search | Search Quest Items
+*ResourcesApi* | [**getAllItemsResourcesList**](docs/Api/ResourcesApi.md#getallitemsresourceslist) | **GET** /{game}/v1/{language}/items/resources/all | List All Resources
+*ResourcesApi* | [**getItemsResourceSearch**](docs/Api/ResourcesApi.md#getitemsresourcesearch) | **GET** /{game}/v1/{language}/items/resources/search | Search Resources
+*ResourcesApi* | [**getItemsResourcesList**](docs/Api/ResourcesApi.md#getitemsresourceslist) | **GET** /{game}/v1/{language}/items/resources | List Resources
+*ResourcesApi* | [**getItemsResourcesSingle**](docs/Api/ResourcesApi.md#getitemsresourcessingle) | **GET** /{game}/v1/{language}/items/resources/{ankama_id} | Single Resources
+*SetsApi* | [**getAllSetsList**](docs/Api/SetsApi.md#getallsetslist) | **GET** /{game}/v1/{language}/sets/all | List All Sets
+*SetsApi* | [**getSetsList**](docs/Api/SetsApi.md#getsetslist) | **GET** /{game}/v1/{language}/sets | List Sets
+*SetsApi* | [**getSetsSearch**](docs/Api/SetsApi.md#getsetssearch) | **GET** /{game}/v1/{language}/sets/search | Search Sets
+*SetsApi* | [**getSetsSingle**](docs/Api/SetsApi.md#getsetssingle) | **GET** /{game}/v1/{language}/sets/{ankama_id} | Single Sets
 *WebhooksApi* | [**deleteWebhooksAlmanaxId**](docs/Api/WebhooksApi.md#deletewebhooksalmanaxid) | **DELETE** /webhooks/almanax/{id} | Unregister Almanax Hook
 *WebhooksApi* | [**deleteWebhooksRssId**](docs/Api/WebhooksApi.md#deletewebhooksrssid) | **DELETE** /webhooks/rss/{id} | Unregister RSS Hook
 *WebhooksApi* | [**deleteWebhooksTwitterId**](docs/Api/WebhooksApi.md#deletewebhookstwitterid) | **DELETE** /webhooks/twitter/{id} | Unregister Twitter Hook
@@ -163,53 +165,53 @@ Class | Method | HTTP request | Description
 
 ## Models
 
-- [AlmanaxEntry](docs/Model/AlmanaxEntry.md)
-- [AlmanaxEntryBonus](docs/Model/AlmanaxEntryBonus.md)
-- [AlmanaxEntryTribute](docs/Model/AlmanaxEntryTribute.md)
-- [AlmanaxEntryTributeItem](docs/Model/AlmanaxEntryTributeItem.md)
+- [Almanax](docs/Model/Almanax.md)
+- [AlmanaxBonus](docs/Model/AlmanaxBonus.md)
+- [AlmanaxTribute](docs/Model/AlmanaxTribute.md)
+- [AlmanaxTributeItem](docs/Model/AlmanaxTributeItem.md)
 - [AlmanaxWebhook](docs/Model/AlmanaxWebhook.md)
 - [AlmanaxWebhookDailySettings](docs/Model/AlmanaxWebhookDailySettings.md)
-- [ConditionEntry](docs/Model/ConditionEntry.md)
-- [ConditionTreeLeaf](docs/Model/ConditionTreeLeaf.md)
-- [ConditionTreeNode](docs/Model/ConditionTreeNode.md)
-- [ConditionTreeRelation](docs/Model/ConditionTreeRelation.md)
+- [Condition](docs/Model/Condition.md)
+- [ConditionLeaf](docs/Model/ConditionLeaf.md)
+- [ConditionNode](docs/Model/ConditionNode.md)
+- [ConditionRelation](docs/Model/ConditionRelation.md)
 - [CreateAlmanaxWebhook](docs/Model/CreateAlmanaxWebhook.md)
 - [CreateAlmanaxWebhookDailySettings](docs/Model/CreateAlmanaxWebhookDailySettings.md)
 - [CreateAlmanaxWebhookMentionsValueInner](docs/Model/CreateAlmanaxWebhookMentionsValueInner.md)
 - [CreateRSSWebhook](docs/Model/CreateRSSWebhook.md)
 - [CreateTwitterWebhook](docs/Model/CreateTwitterWebhook.md)
-- [EffectsEntry](docs/Model/EffectsEntry.md)
+- [Effect](docs/Model/Effect.md)
+- [EffectType](docs/Model/EffectType.md)
 - [Equipment](docs/Model/Equipment.md)
-- [EquipmentSet](docs/Model/EquipmentSet.md)
-- [GetGameSearch200ResponseInner](docs/Model/GetGameSearch200ResponseInner.md)
+- [Error](docs/Model/Error.md)
+- [GameSearch](docs/Model/GameSearch.md)
+- [GameSearchItem](docs/Model/GameSearchItem.md)
+- [GameSearchType](docs/Model/GameSearchType.md)
 - [GetMetaAlmanaxBonuses200ResponseInner](docs/Model/GetMetaAlmanaxBonuses200ResponseInner.md)
-- [GetMetaVersion200Response](docs/Model/GetMetaVersion200Response.md)
 - [GetMetaWebhooksTwitter200Response](docs/Model/GetMetaWebhooksTwitter200Response.md)
-- [ImageUrls](docs/Model/ImageUrls.md)
-- [ItemListEntry](docs/Model/ItemListEntry.md)
-- [ItemListEntryParentSet](docs/Model/ItemListEntryParentSet.md)
-- [ItemListEntryRange](docs/Model/ItemListEntryRange.md)
-- [ItemsListEntryTyped](docs/Model/ItemsListEntryTyped.md)
-- [ItemsListEntryTypedType](docs/Model/ItemsListEntryTypedType.md)
-- [ItemsListPaged](docs/Model/ItemsListPaged.md)
-- [LinksPaged](docs/Model/LinksPaged.md)
+- [Images](docs/Model/Images.md)
+- [ItemSubtype](docs/Model/ItemSubtype.md)
+- [ListItem](docs/Model/ListItem.md)
+- [ListItemGeneral](docs/Model/ListItemGeneral.md)
+- [ListItems](docs/Model/ListItems.md)
+- [ListMounts](docs/Model/ListMounts.md)
+- [ListSet](docs/Model/ListSet.md)
+- [ListSets](docs/Model/ListSets.md)
 - [Mount](docs/Model/Mount.md)
-- [MountListEntry](docs/Model/MountListEntry.md)
-- [MountsListPaged](docs/Model/MountsListPaged.md)
+- [MountFamily](docs/Model/MountFamily.md)
+- [PagedLinks](docs/Model/PagedLinks.md)
 - [PutAlmanaxWebhook](docs/Model/PutAlmanaxWebhook.md)
 - [PutRSSWebhook](docs/Model/PutRSSWebhook.md)
 - [PutTwitterWebhook](docs/Model/PutTwitterWebhook.md)
-- [RecipeEntry](docs/Model/RecipeEntry.md)
+- [Range](docs/Model/Range.md)
+- [Recipe](docs/Model/Recipe.md)
 - [Resource](docs/Model/Resource.md)
-- [ResourceType](docs/Model/ResourceType.md)
 - [RssWebhook](docs/Model/RssWebhook.md)
-- [SetEffectsEntry](docs/Model/SetEffectsEntry.md)
-- [SetEffectsEntryType](docs/Model/SetEffectsEntryType.md)
-- [SetListEntry](docs/Model/SetListEntry.md)
-- [SetsListPaged](docs/Model/SetsListPaged.md)
+- [Set](docs/Model/Set.md)
+- [TranslatedId](docs/Model/TranslatedId.md)
 - [TwitterWebhook](docs/Model/TwitterWebhook.md)
+- [Version](docs/Model/Version.md)
 - [Weapon](docs/Model/Weapon.md)
-- [WeaponRange](docs/Model/WeaponRange.md)
 
 ## Authorization
 Endpoints do not require authorization.
@@ -231,6 +233,6 @@ stelzo@steado.de
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `0.9.4`
-    - Generator version: `7.10.0-SNAPSHOT`
+- API version: `1.0.0-rc.2`
+    - Generator version: `7.11.0-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

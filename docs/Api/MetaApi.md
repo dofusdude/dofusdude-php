@@ -4,12 +4,12 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getGameSearchTypes()**](MetaApi.md#getGameSearchTypes) | **GET** /dofus2/meta/search/types | Available Game Search Types |
-| [**getItemTypes()**](MetaApi.md#getItemTypes) | **GET** /dofus2/meta/items/types | Available Item Types |
-| [**getMetaAlmanaxBonuses()**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses |
-| [**getMetaAlmanaxBonusesSearch()**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses |
-| [**getMetaElements()**](MetaApi.md#getMetaElements) | **GET** /dofus2/meta/elements | Effects and Condition Elements |
-| [**getMetaVersion()**](MetaApi.md#getMetaVersion) | **GET** /dofus2/meta/version | Game Version |
+| [**getGameSearchTypes()**](MetaApi.md#getGameSearchTypes) | **GET** /dofus3/meta/search/types | Available Game Search Types |
+| [**getItemTypes()**](MetaApi.md#getItemTypes) | **GET** /dofus3/meta/items/types | Available Item Types |
+| [**getMetaAlmanaxBonuses()**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus3/meta/{language}/almanax/bonuses | Available Almanax Bonuses |
+| [**getMetaAlmanaxBonusesSearch()**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus3/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses |
+| [**getMetaElements()**](MetaApi.md#getMetaElements) | **GET** /dofus3/meta/elements | Effects and Condition Elements |
+| [**getMetaVersion()**](MetaApi.md#getMetaVersion) | **GET** /dofus3/meta/version | Game Version |
 
 
 ## `getGameSearchTypes()`
@@ -20,7 +20,7 @@ getGameSearchTypes(): string[]
 
 Available Game Search Types
 
-Get all types for /{game}/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
+Get all types for /{game}/v1/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
 
 ### Example
 
@@ -141,7 +141,7 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$language = fr; // string
+$language = fr; // string | a valid language code
 
 try {
     $result = $apiInstance->getMetaAlmanaxBonuses($language);
@@ -155,7 +155,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **language** | **string**|  | |
+| **language** | **string**| a valid language code | |
 
 ### Return type
 
@@ -290,7 +290,7 @@ No authorization required
 ## `getMetaVersion()`
 
 ```php
-getMetaVersion(): \OpenAPI\Client\Model\GetMetaVersion200Response
+getMetaVersion(): \OpenAPI\Client\Model\Version
 ```
 
 Game Version
@@ -325,7 +325,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetMetaVersion200Response**](../Model/GetMetaVersion200Response.md)
+[**\OpenAPI\Client\Model\Version**](../Model/Version.md)
 
 ### Authorization
 

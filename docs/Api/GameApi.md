@@ -4,19 +4,19 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getGameSearch()**](GameApi.md#getGameSearch) | **GET** /{game}/{language}/search | Game Search |
-| [**getItemsAllSearch()**](GameApi.md#getItemsAllSearch) | **GET** /{game}/{language}/items/search | Search All Items |
+| [**getGameSearch()**](GameApi.md#getGameSearch) | **GET** /{game}/v1/{language}/search | Game Search |
+| [**getItemsAllSearch()**](GameApi.md#getItemsAllSearch) | **GET** /{game}/v1/{language}/items/search | Search All Items |
 
 
 ## `getGameSearch()`
 
 ```php
-getGameSearch($language, $game, $query, $filter_type, $limit, $fields_item, $filter_type_enum): \OpenAPI\Client\Model\GetGameSearch200ResponseInner[]
+getGameSearch($language, $game, $query, $filter_search_index, $limit, $fields_item, $filter_type_name_id): \OpenAPI\Client\Model\GameSearch[]
 ```
 
 Game Search
 
-Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus2/meta/search/types.
+Search in all names and descriptions of all supported types in the game. For the list of supported types see the endpoint /dofus3/meta/search/types.
 
 ### Example
 
@@ -32,15 +32,15 @@ $apiInstance = new OpenAPI\Client\Api\GameApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus2; // string
+$game = dofus3; // string | dofus3 | dofus3beta
 $query = paztek; // string | search query
-$filter_type = ["items-equipment"]; // string[] | only results with all specific type
+$filter_search_index = ["items-equipment"]; // string[] | only results with all specific type
 $limit = 8; // int | maximum number of returned results
 $fields_item = ["level"]; // string[] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
-$filter_type_enum = ["boots"]; // string[] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+$filter_type_name_id = ["boots"]; // string[] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getGameSearch($language, $game, $query, $filter_type, $limit, $fields_item, $filter_type_enum);
+    $result = $apiInstance->getGameSearch($language, $game, $query, $filter_search_index, $limit, $fields_item, $filter_type_name_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GameApi->getGameSearch: ', $e->getMessage(), PHP_EOL;
@@ -52,16 +52,16 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**|  | |
+| **game** | **string**| dofus3 | dofus3beta | |
 | **query** | **string**| search query | |
-| **filter_type** | [**string[]**](../Model/string.md)| only results with all specific type | [optional] |
+| **filter_search_index** | [**string[]**](../Model/string.md)| only results with all specific type | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
 | **fields_item** | [**string[]**](../Model/string.md)| adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. | [optional] |
-| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
+| **filter_type_name_id** | [**string[]**](../Model/string.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetGameSearch200ResponseInner[]**](../Model/GetGameSearch200ResponseInner.md)
+[**\OpenAPI\Client\Model\GameSearch[]**](../Model/GameSearch.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ No authorization required
 ## `getItemsAllSearch()`
 
 ```php
-getItemsAllSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum): \OpenAPI\Client\Model\ItemsListEntryTyped[]
+getItemsAllSearch($language, $game, $query, $filter_min_level, $filter_max_level, $limit, $filter_type_name_id): \OpenAPI\Client\Model\ListItemGeneral[]
 ```
 
 Search All Items
@@ -100,16 +100,15 @@ $apiInstance = new OpenAPI\Client\Api\GameApi(
     new GuzzleHttp\Client()
 );
 $language = fr; // string | a valid language code
-$game = dofus2; // string
+$game = dofus3; // string | dofus3 | dofus3beta
 $query = atcham; // string | case sensitive search query
-$filter_type_name = Bottes; // string | only results with the translated type name across all item_subtypes
 $filter_min_level = 190; // int | only results which level is equal or above this value
 $filter_max_level = 200; // int | only results which level is equal or below this value
 $limit = 8; // int | maximum number of returned results
-$filter_type_enum = ["boots"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+$filter_type_name_id = ["boots"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getItemsAllSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum);
+    $result = $apiInstance->getItemsAllSearch($language, $game, $query, $filter_min_level, $filter_max_level, $limit, $filter_type_name_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GameApi->getItemsAllSearch: ', $e->getMessage(), PHP_EOL;
@@ -121,17 +120,16 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **string**| a valid language code | |
-| **game** | **string**|  | |
+| **game** | **string**| dofus3 | dofus3beta | |
 | **query** | **string**| case sensitive search query | |
-| **filter_type_name** | **string**| only results with the translated type name across all item_subtypes | [optional] |
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
-| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
+| **filter_type_name_id** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ItemsListEntryTyped[]**](../Model/ItemsListEntryTyped.md)
+[**\OpenAPI\Client\Model\ListItemGeneral[]**](../Model/ListItemGeneral.md)
 
 ### Authorization
 

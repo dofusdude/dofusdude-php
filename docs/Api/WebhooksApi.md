@@ -44,7 +44,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 
 try {
     $apiInstance->deleteWebhooksAlmanaxId($id);
@@ -57,7 +57,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 
 ### Return type
 
@@ -99,7 +99,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 
 try {
     $apiInstance->deleteWebhooksRssId($id);
@@ -112,7 +112,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 
 ### Return type
 
@@ -154,7 +154,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 
 try {
     $apiInstance->deleteWebhooksTwitterId($id);
@@ -167,7 +167,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 
 ### Return type
 
@@ -368,7 +368,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 
 try {
     $result = $apiInstance->getWebhooksAlmanaxId($id);
@@ -382,7 +382,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 
 ### Return type
 
@@ -424,7 +424,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 
 try {
     $result = $apiInstance->getWebhooksRssId($id);
@@ -438,7 +438,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 
 ### Return type
 
@@ -480,7 +480,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 
 try {
     $result = $apiInstance->getWebhooksTwitterId($id);
@@ -494,7 +494,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 
 ### Return type
 
@@ -536,7 +536,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_almanax_webhook = {"bonus_whitelist":null,"bonus_blacklist":null,"subscriptions":["dofus2_fr"],"format":"discord","callback":"https://discord.com/api/webhooks/XYZ","daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"}; // \OpenAPI\Client\Model\CreateAlmanaxWebhook | 
+$create_almanax_webhook = {"bonus_whitelist":null,"bonus_blacklist":null,"subscriptions":["dofus3_fr"],"format":"discord","callback":"https://discord.com/api/webhooks/XYZ","daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"}; // \OpenAPI\Client\Model\CreateAlmanaxWebhook | 
 
 try {
     $apiInstance->postWebhooksAlmanax($create_almanax_webhook);
@@ -591,7 +591,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_rss_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus2-en-official-news"],"format":"discord","preview_length":2000,"callback":"https://discord.com/api/webhooks/XYZ"}; // \OpenAPI\Client\Model\CreateRSSWebhook | 
+$create_rss_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus3-en-official-news"],"format":"discord","preview_length":2000,"callback":"https://discord.com/api/webhooks/XYZ"}; // \OpenAPI\Client\Model\CreateRSSWebhook | 
 
 try {
     $apiInstance->postWebhooksRss($create_rss_webhook);
@@ -701,7 +701,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 $put_almanax_webhook = {"bonus_whitelist":[],"bonus_blacklist":null,"subscriptions":null,"daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"}; // \OpenAPI\Client\Model\PutAlmanaxWebhook
 
 try {
@@ -716,7 +716,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 | **put_almanax_webhook** | [**\OpenAPI\Client\Model\PutAlmanaxWebhook**](../Model/PutAlmanaxWebhook.md)|  | [optional] |
 
 ### Return type
@@ -759,7 +759,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
 $put_rss_webhook = {"whitelist":null,"blacklist":null,"subscriptions":null,"preview_length":60}; // \OpenAPI\Client\Model\PutRSSWebhook | 
 
 try {
@@ -774,7 +774,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 | **put_rss_webhook** | [**\OpenAPI\Client\Model\PutRSSWebhook**](../Model/PutRSSWebhook.md)|  | [optional] |
 
 ### Return type
@@ -817,8 +817,8 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 'id_example'; // string
-$put_twitter_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus2-en-official-changelog"],"preview_length":null}; // \OpenAPI\Client\Model\PutTwitterWebhook | 
+$id = 'id_example'; // string | the ID returned from the API when creating the webhook
+$put_twitter_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus3-en-official-changelog"],"preview_length":null}; // \OpenAPI\Client\Model\PutTwitterWebhook | 
 
 try {
     $result = $apiInstance->putWebhooksTwitterId($id, $put_twitter_webhook);
@@ -832,7 +832,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
+| **id** | **string**| the ID returned from the API when creating the webhook | |
 | **put_twitter_webhook** | [**\OpenAPI\Client\Model\PutTwitterWebhook**](../Model/PutTwitterWebhook.md)|  | [optional] |
 
 ### Return type
