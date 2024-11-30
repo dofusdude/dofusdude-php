@@ -9,7 +9,7 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 | [**getMetaAlmanaxBonuses()**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses |
 | [**getMetaAlmanaxBonusesSearch()**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses |
 | [**getMetaElements()**](MetaApi.md#getMetaElements) | **GET** /dofus3beta/v1/meta/elements | Effects and Condition Elements |
-| [**getMetaVersion()**](MetaApi.md#getMetaVersion) | **GET** /dofus3beta/v1/meta/version | Game Version |
+| [**getMetaVersion()**](MetaApi.md#getMetaVersion) | **GET** /{game}/v1/meta/version | Game Version |
 
 
 ## `getGameSearchTypes()`
@@ -290,7 +290,7 @@ No authorization required
 ## `getMetaVersion()`
 
 ```php
-getMetaVersion(): \OpenAPI\Client\Model\Version
+getMetaVersion($game): \OpenAPI\Client\Model\Version
 ```
 
 Game Version
@@ -310,9 +310,10 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
-    $result = $apiInstance->getMetaVersion();
+    $result = $apiInstance->getMetaVersion($game);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MetaApi->getMetaVersion: ', $e->getMessage(), PHP_EOL;
@@ -321,7 +322,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 
 ### Return type
 
