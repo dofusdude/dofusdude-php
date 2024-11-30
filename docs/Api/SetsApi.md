@@ -157,7 +157,7 @@ No authorization required
 ## `getSetsSearch()`
 
 ```php
-getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic): \OpenAPI\Client\Model\ListEquipmentSet[]
+getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListEquipmentSet[]
 ```
 
 Search Sets
@@ -183,10 +183,11 @@ $query = Des; // string | case sensitive search query
 $filter_min_highest_equipment_level = 195; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
 $limit = 8; // int | maximum number of returned results
-$filter_is_cosmetic = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+$filter_contains_cosmetics_only = True; // bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment.
+$filter_contains_cosmetics = True; // bool | filter sets based on if they got any cosmetic items in it
 
 try {
-    $result = $apiInstance->getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_is_cosmetic);
+    $result = $apiInstance->getSetsSearch($language, $game, $query, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $limit, $filter_contains_cosmetics_only, $filter_contains_cosmetics);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SetsApi->getSetsSearch: ', $e->getMessage(), PHP_EOL;
@@ -203,7 +204,8 @@ try {
 | **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] |
 | **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
-| **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
+| **filter_contains_cosmetics_only** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] |
+| **filter_contains_cosmetics** | **bool**| filter sets based on if they got any cosmetic items in it | [optional] |
 
 ### Return type
 

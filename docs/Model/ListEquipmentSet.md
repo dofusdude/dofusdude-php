@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **level** | **int** |  | [optional]
 **effects** | **array<string,\OpenAPI\Client\Model\Effect[]>** |  | [optional]
 **equipment_ids** | **int[]** |  | [optional]
-**is_cosmetic** | **bool** |  | [optional]
+**contains_cosmetics** | **bool** |  | [optional]
+**contains_cosmetics_only** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
