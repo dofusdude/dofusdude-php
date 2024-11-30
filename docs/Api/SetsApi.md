@@ -83,7 +83,7 @@ No authorization required
 ## `getSetsList()`
 
 ```php
-getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListEquipmentSet
+getSetsList($language, $game, $sort_level, $filter_min_highest_equipment_level, $filter_max_highest_equipment_level, $page_size, $page_number, $fields_set, $filter_contains_cosmetics_only, $filter_contains_cosmetics): \OpenAPI\Client\Model\ListEquipmentSets
 ```
 
 List Sets
@@ -139,7 +139,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListEquipmentSet**](../Model/ListEquipmentSet.md)
+[**\OpenAPI\Client\Model\ListEquipmentSets**](../Model/ListEquipmentSets.md)
 
 ### Authorization
 
