@@ -34,7 +34,7 @@ $apiInstance = new OpenAPI\Client\Api\CosmeticsApi(
     new GuzzleHttp\Client()
 );
 $language = fr; // string | a valid language code
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_level = 1; // int | only results which level is equal or above this value
 $filter_max_level = 5; // int | only results which level is equal or below this value
@@ -102,7 +102,7 @@ $apiInstance = new OpenAPI\Client\Api\CosmeticsApi(
     new GuzzleHttp\Client()
 );
 $language = fr; // string | a valid language code
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_level = 1; // int | only results which level is equal or above this value
 $filter_max_level = 5; // int | only results which level is equal or below this value
@@ -174,7 +174,7 @@ $apiInstance = new OpenAPI\Client\Api\CosmeticsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = nedora; // string | case sensitive search query
 $filter_min_level = 1; // int | only results which level is equal or above this value
 $filter_max_level = 2; // int | only results which level is equal or below this value
@@ -243,7 +243,7 @@ $apiInstance = new OpenAPI\Client\Api\CosmeticsApi(
 );
 $language = 'language_example'; // string | a valid language code
 $ankama_id = 24132; // int | identifier
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getCosmeticsSingle($language, $ankama_id, $game);

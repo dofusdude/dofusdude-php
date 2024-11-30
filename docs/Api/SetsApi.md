@@ -34,7 +34,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_highest_equipment_level = 190; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
@@ -104,7 +104,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = asc; // string | sort the resulting list by level, default unsorted
 $filter_min_highest_equipment_level = 190; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
@@ -178,7 +178,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = Des; // string | case sensitive search query
 $filter_min_highest_equipment_level = 195; // int | only results where the equipment with the highest level is above or equal to this value
 $filter_max_highest_equipment_level = 200; // int | only results where the equipment with the highest level is below or equal to this value
@@ -247,7 +247,7 @@ $apiInstance = new OpenAPI\Client\Api\SetsApi(
 );
 $language = 'language_example'; // string | a valid language code
 $ankama_id = 499; // int | identifier
-$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getSetsSingle($language, $ankama_id, $game);

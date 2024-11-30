@@ -362,7 +362,7 @@ class MetaApi
     {
 
 
-        $resourcePath = '/dofus3/meta/search/types';
+        $resourcePath = '/dofus3beta/v1/meta/search/types';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -650,7 +650,7 @@ class MetaApi
     {
 
 
-        $resourcePath = '/dofus3/meta/items/types';
+        $resourcePath = '/dofus3beta/v1/meta/items/types';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -950,7 +950,7 @@ class MetaApi
         }
 
 
-        $resourcePath = '/dofus3/meta/{language}/almanax/bonuses';
+        $resourcePath = '/dofus2/meta/{language}/almanax/bonuses';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1276,7 +1276,7 @@ class MetaApi
 
 
 
-        $resourcePath = '/dofus3/meta/{language}/almanax/bonuses/search';
+        $resourcePath = '/dofus2/meta/{language}/almanax/bonuses/search';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1590,7 +1590,7 @@ class MetaApi
     {
 
 
-        $resourcePath = '/dofus3/meta/elements';
+        $resourcePath = '/dofus3beta/v1/meta/elements';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1878,7 +1878,7 @@ class MetaApi
     {
 
 
-        $resourcePath = '/dofus3/meta/version';
+        $resourcePath = '/dofus3beta/v1/meta/version';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

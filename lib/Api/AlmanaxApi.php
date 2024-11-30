@@ -374,7 +374,7 @@ class AlmanaxApi
         }
 
 
-        $resourcePath = '/dofus3/{language}/almanax/{date}';
+        $resourcePath = '/dofus2/{language}/almanax/{date}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -726,7 +726,7 @@ class AlmanaxApi
         
 
 
-        $resourcePath = '/dofus3/{language}/almanax';
+        $resourcePath = '/dofus2/{language}/almanax';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
