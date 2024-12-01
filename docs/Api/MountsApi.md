@@ -145,7 +145,7 @@ No authorization required
 ## `getMountsSearch()`
 
 ```php
-getMountsSearch($language, $game, $query, $filter_family_name, $limit): \OpenAPI\Client\Model\Mount[]
+getMountsSearch($language, $game, $query, $filter_family_name, $limit, $filter_family_id): \OpenAPI\Client\Model\Mount[]
 ```
 
 Search Mounts
@@ -170,9 +170,10 @@ $game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = Dorée; // string | case sensitive search query
 $filter_family_name = Dragodinde; // string | only results with the translated family name
 $limit = 8; // int | maximum number of returned results
+$filter_family_id = 56; // int | only results with the unique family id
 
 try {
-    $result = $apiInstance->getMountsSearch($language, $game, $query, $filter_family_name, $limit);
+    $result = $apiInstance->getMountsSearch($language, $game, $query, $filter_family_name, $limit, $filter_family_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MountsApi->getMountsSearch: ', $e->getMessage(), PHP_EOL;
@@ -188,6 +189,7 @@ try {
 | **query** | **string**| case sensitive search query | |
 | **filter_family_name** | **string**| only results with the translated family name | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
+| **filter_family_id** | **int**| only results with the unique family id | [optional] |
 
 ### Return type
 

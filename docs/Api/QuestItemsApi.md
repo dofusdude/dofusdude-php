@@ -213,7 +213,7 @@ No authorization required
 ## `getItemsQuestSearch()`
 
 ```php
-getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum): \OpenAPI\Client\Model\ListItem[]
+getItemsQuestSearch($language, $game, $query, $filter_min_level, $filter_max_level, $limit, $filter_type_name_id): \OpenAPI\Client\Model\ListItem[]
 ```
 
 Search Quest Items
@@ -236,14 +236,13 @@ $apiInstance = new OpenAPI\Client\Api\QuestItemsApi(
 $language = es; // string | a valid language code
 $game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = Ficha; // string | case sensitive search query
-$filter_type_name = Justicieros; // string | only results with the translated type name
 $filter_min_level = 60; // int | only results which level is equal or above this value
 $filter_max_level = 70; // int | only results which level is equal or below this value
 $limit = 8; // int | maximum number of returned results
-$filter_type_enum = ["vigilantes"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+$filter_type_name_id = ["vigilantes"]; // string[] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
-    $result = $apiInstance->getItemsQuestSearch($language, $game, $query, $filter_type_name, $filter_min_level, $filter_max_level, $limit, $filter_type_enum);
+    $result = $apiInstance->getItemsQuestSearch($language, $game, $query, $filter_min_level, $filter_max_level, $limit, $filter_type_name_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestItemsApi->getItemsQuestSearch: ', $e->getMessage(), PHP_EOL;
@@ -257,11 +256,10 @@ try {
 | **language** | **string**| a valid language code | |
 | **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 | **query** | **string**| case sensitive search query | |
-| **filter_type_name** | **string**| only results with the translated type name | [optional] |
 | **filter_min_level** | **int**| only results which level is equal or above this value | [optional] |
 | **filter_max_level** | **int**| only results which level is equal or below this value | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
-| **filter_type_enum** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
+| **filter_type_name_id** | [**string[]**](../Model/string.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 
