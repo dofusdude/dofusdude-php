@@ -36,8 +36,8 @@ $game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = paztek; // string | search query
 $filter_search_index = ["items-equipment"]; // string[] | only results with all specific type
 $limit = 8; // int | maximum number of returned results
-$fields_item = ["level"]; // string[] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed.
-$filter_type_name_id = ["boots"]; // string[] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
+$fields_item = ["level"]; // string[] | adds fields from the item search to the list entries if the hit is an item. Multiple comma separated values allowed.
+$filter_type_name_id = ["boots"]; // string[] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[search_index]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\".
 
 try {
     $result = $apiInstance->getGameSearch($language, $game, $query, $filter_search_index, $limit, $fields_item, $filter_type_name_id);
@@ -56,8 +56,8 @@ try {
 | **query** | **string**| search query | |
 | **filter_search_index** | [**string[]**](../Model/string.md)| only results with all specific type | [optional] |
 | **limit** | **int**| maximum number of returned results | [optional] [default to 8] |
-| **fields_item** | [**string[]**](../Model/string.md)| adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. | [optional] |
-| **filter_type_name_id** | [**string[]**](../Model/string.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
+| **fields_item** | [**string[]**](../Model/string.md)| adds fields from the item search to the list entries if the hit is an item. Multiple comma separated values allowed. | [optional] |
+| **filter_type_name_id** | [**string[]**](../Model/string.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[search_index]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] |
 
 ### Return type
 
