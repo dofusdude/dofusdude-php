@@ -93,7 +93,7 @@ $language = fr; // string | code
 $filter_bonus_type = experience-points; // string | ids from meta/{language}/almanax/bonuses
 $range_from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | yyyy-mm-dd
 $range_to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | yyyy-mm-dd
-$range_size = -1; // int | size of the returned range
+$range_size = -1; // int | Size of the returned range. Disable to fully use the range by setting size to -1.
 $timezone = Europe/Paris; // string | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
 
 try {
@@ -112,7 +112,7 @@ try {
 | **filter_bonus_type** | **string**| ids from meta/{language}/almanax/bonuses | [optional] |
 | **range_from** | **\DateTime**| yyyy-mm-dd | [optional] |
 | **range_to** | **\DateTime**| yyyy-mm-dd | [optional] |
-| **range_size** | **int**| size of the returned range | [optional] |
+| **range_size** | **int**| Size of the returned range. Disable to fully use the range by setting size to -1. | [optional] |
 | **timezone** | **string**| determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. | [optional] [default to &#39;Europe/Paris&#39;] |
 
 ### Return type

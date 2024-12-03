@@ -463,7 +463,7 @@ class AlmanaxApi
      * @param  string $filter_bonus_type ids from meta/{language}/almanax/bonuses (optional)
      * @param  \DateTime $range_from yyyy-mm-dd (optional)
      * @param  \DateTime $range_to yyyy-mm-dd (optional)
-     * @param  int $range_size size of the returned range (optional)
+     * @param  int $range_size Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
      * @param  string $timezone determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. (optional, default to 'Europe/Paris')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlmanaxRange'] to see the possible values for this operation
      *
@@ -486,7 +486,7 @@ class AlmanaxApi
      * @param  string $filter_bonus_type ids from meta/{language}/almanax/bonuses (optional)
      * @param  \DateTime $range_from yyyy-mm-dd (optional)
      * @param  \DateTime $range_to yyyy-mm-dd (optional)
-     * @param  int $range_size size of the returned range (optional)
+     * @param  int $range_size Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
      * @param  string $timezone determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. (optional, default to 'Europe/Paris')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlmanaxRange'] to see the possible values for this operation
      *
@@ -616,7 +616,7 @@ class AlmanaxApi
      * @param  string $filter_bonus_type ids from meta/{language}/almanax/bonuses (optional)
      * @param  \DateTime $range_from yyyy-mm-dd (optional)
      * @param  \DateTime $range_to yyyy-mm-dd (optional)
-     * @param  int $range_size size of the returned range (optional)
+     * @param  int $range_size Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
      * @param  string $timezone determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. (optional, default to 'Europe/Paris')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlmanaxRange'] to see the possible values for this operation
      *
@@ -642,7 +642,7 @@ class AlmanaxApi
      * @param  string $filter_bonus_type ids from meta/{language}/almanax/bonuses (optional)
      * @param  \DateTime $range_from yyyy-mm-dd (optional)
      * @param  \DateTime $range_to yyyy-mm-dd (optional)
-     * @param  int $range_size size of the returned range (optional)
+     * @param  int $range_size Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
      * @param  string $timezone determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. (optional, default to 'Europe/Paris')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlmanaxRange'] to see the possible values for this operation
      *
@@ -697,7 +697,7 @@ class AlmanaxApi
      * @param  string $filter_bonus_type ids from meta/{language}/almanax/bonuses (optional)
      * @param  \DateTime $range_from yyyy-mm-dd (optional)
      * @param  \DateTime $range_to yyyy-mm-dd (optional)
-     * @param  int $range_size size of the returned range (optional)
+     * @param  int $range_size Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
      * @param  string $timezone determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. (optional, default to 'Europe/Paris')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlmanaxRange'] to see the possible values for this operation
      *
@@ -719,9 +719,6 @@ class AlmanaxApi
 
         if ($range_size !== null && $range_size > 370) {
             throw new \InvalidArgumentException('invalid value for "$range_size" when calling AlmanaxApi.getAlmanaxRange, must be smaller than or equal to 370.');
-        }
-        if ($range_size !== null && $range_size < -1) {
-            throw new \InvalidArgumentException('invalid value for "$range_size" when calling AlmanaxApi.getAlmanaxRange, must be bigger than or equal to -1.');
         }
         
 
