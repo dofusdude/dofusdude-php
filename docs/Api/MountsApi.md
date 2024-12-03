@@ -34,7 +34,7 @@ $apiInstance = new OpenAPI\Client\Api\MountsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $filter_family_name = Dragoturkey; // string | only results with the translated family name
 $accept_encoding = 'accept_encoding_example'; // string | optional compression for saving bandwidth
 $filter_family_id = 56; // int | only results with the unique family id
@@ -98,7 +98,7 @@ $apiInstance = new OpenAPI\Client\Api\MountsApi(
     new GuzzleHttp\Client()
 );
 $language = 'language_example'; // string | a valid language code
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $filter_family_name = Dragoturkey; // string | only results with the translated family name
 $page_size = 10; // int | size of the results from the list. -1 disables pagination and gets all in one response.
 $page_number = 1; // int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
@@ -166,7 +166,7 @@ $apiInstance = new OpenAPI\Client\Api\MountsApi(
     new GuzzleHttp\Client()
 );
 $language = fr; // string | a valid language code
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = Dorée; // string | case sensitive search query
 $filter_family_name = Dragodinde; // string | only results with the translated family name
 $limit = 8; // int | maximum number of returned results
@@ -233,7 +233,7 @@ $apiInstance = new OpenAPI\Client\Api\MountsApi(
 );
 $language = 'language_example'; // string | a valid language code
 $ankama_id = 180; // int | identifier
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getMountsSingle($language, $ankama_id, $game);

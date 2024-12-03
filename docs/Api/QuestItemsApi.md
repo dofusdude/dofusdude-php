@@ -34,7 +34,7 @@ $apiInstance = new OpenAPI\Client\Api\QuestItemsApi(
     new GuzzleHttp\Client()
 );
 $language = fr; // string | a valid language code
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = desc; // string | sort the resulting list by level, default unsorted
 $filter_min_level = 1; // int | only results which level is equal or above this value
 $filter_max_level = 50; // int | only results which level is equal or below this value
@@ -103,7 +103,7 @@ $apiInstance = new OpenAPI\Client\Api\QuestItemsApi(
 );
 $language = 'language_example'; // string | a valid language code
 $ankama_id = 25256; // int | identifier
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getItemQuestSingle($language, $ankama_id, $game);
@@ -162,7 +162,7 @@ $apiInstance = new OpenAPI\Client\Api\QuestItemsApi(
     new GuzzleHttp\Client()
 );
 $language = fr; // string | a valid language code
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $sort_level = desc; // string | sort the resulting list by level, default unsorted
 $filter_min_level = 1; // int | only results which level is equal or above this value
 $filter_max_level = 50; // int | only results which level is equal or below this value
@@ -234,7 +234,7 @@ $apiInstance = new OpenAPI\Client\Api\QuestItemsApi(
     new GuzzleHttp\Client()
 );
 $language = es; // string | a valid language code
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 $query = Ficha; // string | case sensitive search query
 $filter_min_level = 60; // int | only results which level is equal or above this value
 $filter_max_level = 70; // int | only results which level is equal or below this value

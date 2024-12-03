@@ -35,7 +35,7 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$game = 'game_example'; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getGameSearchTypes($game);
@@ -91,7 +91,7 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$game = 'game_example'; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getItemTypes($game);
@@ -263,7 +263,7 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$game = 'game_example'; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getMetaElements($game);
@@ -319,7 +319,7 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$game = dofus3beta; // string | game main 'dofus3' or beta channel 'dofus3beta'
+$game = dofus3; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
     $result = $apiInstance->getMetaVersion($game);
