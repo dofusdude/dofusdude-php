@@ -4,18 +4,18 @@ All URIs are relative to https://api.dofusdu.de, except if the operation defines
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getGameSearchTypes()**](MetaApi.md#getGameSearchTypes) | **GET** /dofus3beta/v1/meta/search/types | Available Game Search Types |
-| [**getItemTypes()**](MetaApi.md#getItemTypes) | **GET** /dofus3beta/v1/meta/items/types | Available Item Types |
-| [**getMetaAlmanaxBonuses()**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses |
-| [**getMetaAlmanaxBonusesSearch()**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses |
-| [**getMetaElements()**](MetaApi.md#getMetaElements) | **GET** /dofus3beta/v1/meta/elements | Effects and Condition Elements |
+| [**getGameSearchTypes()**](MetaApi.md#getGameSearchTypes) | **GET** /{game}/v1/meta/search/types | Available Game Search Types |
+| [**getItemTypes()**](MetaApi.md#getItemTypes) | **GET** /{game}/v1/meta/items/types | Available Item Types |
+| [**getMetaAlmanaxBonuses()**](MetaApi.md#getMetaAlmanaxBonuses) | **GET** /dofus3/v1/meta/{language}/almanax/bonuses | Available Almanax Bonuses |
+| [**getMetaAlmanaxBonusesSearch()**](MetaApi.md#getMetaAlmanaxBonusesSearch) | **GET** /dofus3/v1/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses |
+| [**getMetaElements()**](MetaApi.md#getMetaElements) | **GET** /{game}/v1/meta/elements | Effects and Condition Elements |
 | [**getMetaVersion()**](MetaApi.md#getMetaVersion) | **GET** /{game}/v1/meta/version | Game Version |
 
 
 ## `getGameSearchTypes()`
 
 ```php
-getGameSearchTypes(): string[]
+getGameSearchTypes($game): string[]
 ```
 
 Available Game Search Types
@@ -35,9 +35,10 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$game = 'game_example'; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
-    $result = $apiInstance->getGameSearchTypes();
+    $result = $apiInstance->getGameSearchTypes($game);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MetaApi->getGameSearchTypes: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +47,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 
 ### Return type
 
@@ -68,7 +71,7 @@ No authorization required
 ## `getItemTypes()`
 
 ```php
-getItemTypes(): string[]
+getItemTypes($game): string[]
 ```
 
 Available Item Types
@@ -88,9 +91,10 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$game = 'game_example'; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
-    $result = $apiInstance->getItemTypes();
+    $result = $apiInstance->getItemTypes($game);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MetaApi->getItemTypes: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +103,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 
 ### Return type
 
@@ -237,7 +243,7 @@ No authorization required
 ## `getMetaElements()`
 
 ```php
-getMetaElements(): string[]
+getMetaElements($game): string[]
 ```
 
 Effects and Condition Elements
@@ -257,9 +263,10 @@ $apiInstance = new OpenAPI\Client\Api\MetaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$game = 'game_example'; // string | game main 'dofus3' or beta channel 'dofus3beta'
 
 try {
-    $result = $apiInstance->getMetaElements();
+    $result = $apiInstance->getMetaElements($game);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MetaApi->getMetaElements: ', $e->getMessage(), PHP_EOL;
@@ -268,7 +275,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **game** | **string**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | |
 
 ### Return type
 
